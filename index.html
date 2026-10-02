@@ -233,7 +233,6 @@
                 <p class="text-gray-400 text-lg">Những dự án và sản phẩm thực tế tôi đã triển khai.</p>
             </div>
             
-            <!-- ĐÃ THÊM TAB INDIE GAME -->
             <div class="flex flex-wrap gap-2" id="portfolio-filters">
                 <button class="filter-btn active px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition" data-filter="all">Tất cả</button>
                 <button class="filter-btn px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition hover:border-primary text-gray-300 hover:text-white" data-filter="uxui">UX/UI & Product</button>
@@ -382,15 +381,16 @@
             <div class="grid md:grid-cols-2 gap-8 text-left mt-8">
                 <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700">
                     <h3 class="text-xl font-bold mb-6">Gửi tin nhắn</h3>
-                    <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Tin nhắn đã được gửi.');" class="space-y-4">
+                    <!-- Form đã chuẩn bị thuộc tính name="" để sẵn sàng tích hợp backend -->
+                    <form onsubmit="event.preventDefault(); alert('Đây là giao diện mô phỏng. Để kích hoạt gửi email tự động, vui lòng liên kết với Formspree.io');" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Tên của bạn" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition">
+                            <input type="text" name="name" placeholder="Tên của bạn" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition">
                         </div>
                         <div>
-                            <input type="email" placeholder="Email liên hệ" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition">
+                            <input type="email" name="email" placeholder="Email liên hệ" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition">
                         </div>
                         <div>
-                            <textarea placeholder="Nội dung dự án..." rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition resize-none"></textarea>
+                            <textarea name="message" placeholder="Nội dung dự án..." rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition resize-none"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-primary hover:bg-indigo-600 text-white font-medium py-3 rounded-xl transition duration-300">
                             Gửi ngay
@@ -407,14 +407,7 @@
                         <h4 class="text-sm text-gray-500 font-semibold uppercase tracking-wider mb-2">Vị trí</h4>
                         <p class="text-lg text-white">Hà Nội, Việt Nam <br> <span class="text-gray-400 text-base">(Sẵn sàng làm việc Remote)</span></p>
                     </div>
-                    <div>
-                        <h4 class="text-sm text-gray-500 font-semibold uppercase tracking-wider mb-4">Mạng xã hội</h4>
-                        <div class="flex gap-4">
-                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-xl hover:bg-primary hover:border-primary transition"><i class="fab fa-behance"></i></a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-xl hover:bg-[#ea4c89] hover:border-[#ea4c89] transition"><i class="fab fa-dribbble"></i></a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-xl hover:bg-[#0077b5] hover:border-[#0077b5] transition"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+                    <!-- Mục Mạng xã hội đã được xóa bỏ theo yêu cầu -->
                 </div>
             </div>
         </div>
