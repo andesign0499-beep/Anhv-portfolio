@@ -100,7 +100,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold tracking-tighter text-white">
-                        AnHV
+                        AnHV<span class="text-primary">.</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -134,11 +134,10 @@
     </nav>
 
     <section id="home" class="relative pt-32 md:pt-40 px-6 lg:px-8 min-h-screen flex items-center overflow-hidden bg-gray-900">
-       <div class="absolute inset-0 z-0">
-            <!-- Đổi opacity-90 thành opacity-100 để ảnh gốc sáng và trong trẻo nhất -->
-            <img src="image/hero-bg.jpg" alt="Living room background" class="w-full h-full object-cover object-center opacity-92">
-            <!-- Giảm dải gradient đen ở giữa từ 80 xuống 30 (via-[#121212]/30) để thu hẹp vùng tối về bên trái -->
-            <div class="absolute inset-0 bg-gray-900/60 md:bg-gradient-to-r md:from-[#121212] md:via-[#121212]/48 md:to-transparent"></div>
+        <div class="absolute inset-0 z-0">
+            <img src="image/hero-bg.jpg" alt="Living room background" class="w-full h-full object-cover object-center opacity-100">
+            <!-- Lớp phủ được nâng cấp: Làm mờ (blur-md) và tối nền trên mobile, trả lại độ nét trên màn hình máy tính (md:backdrop-blur-none) -->
+            <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-md md:backdrop-blur-none md:bg-gray-900/0 md:bg-gradient-to-r md:from-[#121212] md:via-[#121212]/30 md:to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center h-full">
@@ -173,7 +172,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="mb-16 md:text-center max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6">Chuyên môn & Kỹ năng</h2>
-                <p class="text-gray-400 text-lg">Tôi luôn hướng tới sự cân bằng giữa mục tiêu kinh doanh và tỷ lệ giữ chân người dùng để đưa ra các phương án giải quyết vấn đề thuyết phục. </p>
+                <p class="text-gray-400 text-lg">Tôi luôn hướng tới sự cân bằng giữa mục tiêu kinh doanh và tỷ lệ giữ chân người dùng để đưa ra các phương án giải quyết vấn đề thuyết phục.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -265,10 +264,6 @@
                     
                     <div class="flex flex-wrap items-center gap-2 border-t border-gray-700 pt-3">
                         <span class="text-xs font-medium text-gray-500 uppercase">Đối tác:</span>
-                        <!-- Đã sửa thẻ span thành thẻ a với link tương ứng -->
-                          <!-- <a href="https://vtvgo.vn/" target="_blank" class="text-xs bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 hover:text-white px-2.5 py-1 rounded-md transition-colors cursor-pointer">VTVgo</a>
-                         <!-- <a href="https://on.vtvcab.vn/" target="_blank" class="text-xs bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 hover:text-white px-2.5 py-1 rounded-md transition-colors cursor-pointer">VTVcab</a>
-                        <!-- Giữ nguyên đối tác chưa có link -->
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">VTVgo</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">VTVcab</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Galaxy 365</span>
@@ -482,7 +477,7 @@
 
     <footer class="py-8 text-center border-t border-gray-800">
         <p class="text-gray-500 text-sm">
-            &copy; 2026 Hoàng Văn An. Thiết kế với đam mê ♥
+            &copy; 2026 Hoàng Văn An. Thiết kế với ♥
         </p>
     </footer>
 
