@@ -100,7 +100,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold tracking-tighter text-white">
-                        AnHV
+                        AnHV<span class="text-primary">.</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
@@ -134,11 +134,11 @@
     </nav>
 
     <section id="home" class="relative pt-32 md:pt-40 px-6 lg:px-8 min-h-screen flex items-center overflow-hidden bg-gray-900">
-       <div class="absolute inset-0 z-0">
-            <!-- Đổi opacity-90 thành opacity-100 để ảnh gốc sáng và trong trẻo nhất -->
-            <img src="image/hero-bg.jpg" alt="Living room background" class="w-full h-full object-cover object-center opacity-96">
-            <!-- Giảm dải gradient đen ở giữa từ 80 xuống 30 (via-[#121212]/30) để thu hẹp vùng tối về bên trái -->
-            <div class="absolute inset-0 bg-gray-900/60 md:bg-gradient-to-r md:from-[#121212] md:via-[#121212]/40 md:to-transparent"></div>
+        <div class="absolute inset-0 z-0">
+            <!-- Đổi opacity thành 100 để ảnh trong trẻo -->
+            <img src="image/hero-bg.jpg" alt="Living room background" class="w-full h-full object-cover object-center opacity-100">
+            <!-- Thêm backdrop-blur-md cho Mobile, và gỡ bỏ blur trên màn hình Desktop (md:backdrop-blur-none). Giảm phần gradient đen ở giữa xuống 30 -->
+            <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-md md:backdrop-blur-none md:bg-gray-900/0 md:bg-gradient-to-r md:from-[#121212] md:via-[#121212]/30 md:to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 items-center h-full">
@@ -151,14 +151,14 @@
                     <span class="text-gradient drop-shadow-none">Designer</span>
                 </h1>
                 <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed fade-in-up delay-200 drop-shadow-md font-medium">
-                    Với hơn 10 năm kinh nghiệm, tôi chuyên thiết kế sản phẩm số đa nền tảng Mobile, Web, TV. Thế mạnh của tôi là khả năng kết hợp giữa nền tảng mỹ thuật đa phương tiện 2D & 3D và tư duy Production để tối ưu hóa từ ý tưởng đến phát hành.
+                    Với hơn 10 năm kinh nghiệm làm việc tại các môi trường chuyên nghiệp, tôi chuyên thiết kế đa nền tảng (Mobile, Web, giải pháp OTT) kết hợp tư duy thẩm mỹ sắc bén trong Graphic Design và 2D Art.
                 </p>
                 <div class="flex flex-wrap gap-4 fade-in-up delay-300">
                     <a href="#work" class="bg-primary hover:bg-indigo-600 text-white px-8 py-4 rounded-full font-medium transition duration-300 shadow-lg shadow-primary/30 flex items-center gap-2">
-                        Xem dự án <i class="fas fa-arrow-right text-sm"></i>
+                        Xem Dự Án <i class="fas fa-arrow-right text-sm"></i>
                     </a>
                     <a href="#contact" class="bg-gray-800/50 backdrop-blur-md hover:bg-gray-700/80 text-white border border-gray-500/50 px-8 py-4 rounded-full font-medium transition duration-300">
-                        Liên hệ 
+                        Liên hệ ngay
                     </a>
                 </div>
             </div>
@@ -173,7 +173,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="mb-16 md:text-center max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6">Chuyên môn & Kỹ năng</h2>
-                <p class="text-gray-400 text-lg">Tôi luôn hướng tới sự cân bằng giữa mục tiêu kinh doanh và tỷ lệ giữ chân người dùng để đưa ra các phương án giải quyết vấn đề thuyết phục. </p>
+                <p class="text-gray-400 text-lg">Sở hữu thế mạnh trong việc tối ưu hóa giao diện đa nền tảng. Luôn hướng tới sự cân bằng giữa mục tiêu kinh doanh của sản phẩm và tỷ lệ giữ chân người dùng. .</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -184,7 +184,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Product & UI/UX Design</h3>
                     <p class="text-gray-400 leading-relaxed mb-6">
-                        Thiết kế giao diện trực quan và tối ưu trải nghiệm người dùng đa nền tảng Mobile App, Web, TV. Thế mạnh đặc biệt trong mảng ứng dụng truyền thông và giải pháp OTT.
+                        Thiết kế giao diện trực quan và tối ưu trải nghiệm người dùng đa nền tảng (Mobile App, Web). Thế mạnh đặc biệt trong mảng ứng dụng truyền thông và giải pháp OTT.
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li><i class="fas fa-check text-primary mr-2"></i> Figma </li>
@@ -200,11 +200,11 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Graphic Design & Layout</h3>
                     <p class="text-gray-400 leading-relaxed mb-6">
-                        Sáng tạo hình ảnh minh họa, icon, video và animation cho các dự án số. Xử lý hình ảnh in ấn chất lượng cao và thiết kế bộ nhận diện thương hiệu truyền thông chuyên nghiệp.
+                        Thiết kế minh họa hình ảnh, icon, video, animation cho các dự án, xử lý hình ảnh in ấn chất lượng cao và thiết kế bộ nhận diện thương hiệu truyền thông chuyên nghiệp.
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li><i class="fas fa-check text-secondary mr-2"></i> Adobe Photoshop, Illustrator</li>
-                        <li><i class="fas fa-check text-secondary mr-2"></i> Logo Design</li>
+                        <li><i class="fas fa-check text-secondary mr-2"></i> Book Layout Design</li>
                         <li><i class="fas fa-check text-secondary mr-2"></i> Brand Guidelines</li>
                     </ul>
                 </div>
@@ -216,7 +216,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">2D Game & Concept Art</h3>
                     <p class="text-gray-400 leading-relaxed mb-6">
-                        Phát triển Concept Art cho các dự án game 2D. Triển khai các giải pháp kỹ thuật để tạo hiệu ứng và chuyển động mượt mà, góp phần nâng cao trải nghiệm người chơi và đạt mục tiêu doanh thu.
+                        Phát triển Concept Art cho các dự án game 2D, Triển khai các giải pháp công nghệ làm các hiệu ứng và chuyển động trong game. Đóng góp xây dựng sản phẩm mang lại mục tiêu doanh thu
                     </p>
                     <ul class="text-sm text-gray-500 space-y-2">
                         <li><i class="fas fa-check text-green-400 mr-2"></i> Spine animation </li>
@@ -235,6 +235,7 @@
                 <p class="text-gray-400 text-lg">Những dự án và sản phẩm thực tế tôi đã triển khai.</p>
             </div>
             
+            <!-- ĐÃ THÊM TAB INDIE GAME -->
             <div class="flex flex-wrap gap-2" id="portfolio-filters">
                 <button class="filter-btn active px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition" data-filter="all">Tất cả</button>
                 <button class="filter-btn px-5 py-2 rounded-full border border-gray-700 text-sm font-medium transition hover:border-primary text-gray-300 hover:text-white" data-filter="uxui">UX/UI & Product</button>
@@ -258,22 +259,16 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-3">
                         <span class="text-xs font-semibold uppercase tracking-wider text-primary">UX/UI Multi-Platform</span>
-                        <span class="text-xs text-gray-500">Since 2022</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Hệ sinh thái OTT / Multimedia</h3>
-                    <p class="text-gray-400 text-sm mb-4">Thiết kế UX/UI cho giải pháp truyền hình đa nền tảng. Quy chuẩn lưới 4/8pt cho Design system và 10-foot UI dành cho TV. </p>
+                    <p class="text-gray-400 text-sm mb-4">Thiết kế luồng người dùng (User Flow) và giao diện trực quan cho các giải pháp truyền hình đa nền tảng, quản lý nội dung số phức tạp.</p>
                     
                     <div class="flex flex-wrap items-center gap-2 border-t border-gray-700 pt-3">
                         <span class="text-xs font-medium text-gray-500 uppercase">Đối tác:</span>
-                        <!-- Đã sửa thẻ span thành thẻ a với link tương ứng -->
-                          <!-- <a href="https://vtvgo.vn/" target="_blank" class="text-xs bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 hover:text-white px-2.5 py-1 rounded-md transition-colors cursor-pointer">VTVgo</a>
-                         <!-- <a href="https://on.vtvcab.vn/" target="_blank" class="text-xs bg-gray-900 hover:bg-gray-800 border border-gray-700 text-gray-300 hover:text-white px-2.5 py-1 rounded-md transition-colors cursor-pointer">VTVcab</a>
-                        <!-- Giữ nguyên đối tác chưa có link -->
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">VTVgo</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">VTVcab</span>
-                        <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Galaxy 365</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Anonet</span>
-                        
+                        <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">JungoTV</span>
                     </div>
                 </div>
             </div>
@@ -290,15 +285,14 @@
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-primary">UX/UI WEB VAS MOBILE </span>
-                        <span class="text-xs text-gray-500">Since 2017</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-primary">UX/UI Insurtech</span>
+                        <span class="text-xs text-gray-500"></span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Bảo hiểm số ABAcare</h3>
-                    <p class="text-gray-400 text-sm mb-4">Thiết kế giao diện cho các trang web dịch vụ giá trị gia tăng (VAS) của các đối tác viễn thông và bảo hiểm.</p>
+                    <p class="text-gray-400 text-sm mb-4">Phối hợp chặt chẽ với BA để phân tích nghiệp vụ bảo hiểm. Thiết kế tính năng tải đăng ký và tự động điền thông tin giúp người dùng thao tác nhanh chóng.</p>
                     
                     <div class="flex flex-wrap items-center gap-2 border-t border-gray-700 pt-3">
                         <span class="text-xs font-medium text-gray-500 uppercase">Đối tác:</span>
-                        <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Mobifone</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">PVI</span>
                         <span class="text-xs bg-gray-900 border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Epass</span>
                         <a href="https://abacare.vn/" target="_blank" class="ml-auto text-xs text-primary hover:underline font-semibold flex items-center gap-1">
@@ -321,35 +315,29 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-3">
                         <span class="text-xs font-semibold uppercase tracking-wider text-secondary">Graphic & Illustration</span>
-                        <span class="text-xs text-gray-500">Since 2012</span>
+                        <span class="text-xs text-gray-500"></span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Illustrations & Banners</h3>
                     <p class="text-gray-400 text-sm mb-4">Thực hiện vẽ minh họa cho các tài liệu dự án, đồng thời lên concept và triển khai các banner truyền thông sáng tạo.</p>
                 </div>
             </div>
 
-            <!-- Project 4: SaaS Dashboard System -->
+            <!-- Project 4: Dashboard UI -->
             <div class="project-card relative group rounded-3xl overflow-hidden bg-gray-800 border border-gray-700 portfolio-item" data-category="uxui">
                 <div class="aspect-[4/3] overflow-hidden bg-gray-900 relative">
                     <img src="image/cms.jpg" alt="Dashboard UI" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                     <div class="project-overlay absolute inset-0 bg-gray-900/80 opacity-0 flex items-center justify-center backdrop-blur-sm">
-                        <a href="https://sigmadrm.com/en" target="_blank" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-xl hover:scale-110 transition shadow-lg">
+                        <a href="#" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-xl hover:scale-110 transition shadow-lg">
                             <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-primary">Web & Dashboard</span> <span class="text-xs text-gray-500">Since 2019</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-primary">Web & Dashboard</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">SaaS Dashboard System</h3>
-                    <p class="text-gray-400 text-sm mb-4">Phối hợp cùng BA phân tích luồng nghiệp vụ, xử lý các luồng người dùng (User Flow) phức tạp thành trải nghiệm đơn giản và trực quan. Nghiên cứu và xây dựng hệ thống Design System thống nhất.</p>
-                    
-                    <div class="flex flex-wrap items-center gap-2 border-t border-gray-700 pt-3">
-                        <a href="https://sigmadrm.com/en" target="_blank" class="ml-auto text-xs text-primary hover:underline font-semibold flex items-center gap-1">
-                            Visit Site <i class="fas fa-external-link-alt text-[10px]"></i>
-                        </a>
-                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Nghiên cứu thuật toán và triển khai Gameplay. Phân tích tâm lý người chơi để tối ưu hóa vị trí và kịch bản hiển thị quảng cáo (Rewarded Ads), giúp tăng tỷ lệ tương tác tự nguyện.</p>
                 </div>
             </div>
 
@@ -366,11 +354,9 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-3">
                         <span class="text-xs font-semibold uppercase tracking-wider text-green-400">Game Development</span>
-                        <span class="text-xs text-gray-500">Since 2014</span>
+                        <span class="text-xs text-gray-500">2026</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">Ball Magic Mobile</h3>
-                    <p class="text-gray-400 text-sm mb-4">Nghiên cứu thuật toán và triển khai Gameplay. Phân tích tâm lý người chơi để tối ưu hóa vị trí và kịch bản hiển thị quảng cáo (Rewarded Ads), giúp tăng tỷ lệ tương tác tự nguyện.</p>
-                    
+                    <h3 class="text-2xl font-bold mb-2">Ball Magic</h3>
                     <div class="flex flex-wrap items-center gap-2 border-t border-gray-700 pt-3">
                         <a href="https://andesign0499-beep.github.io/ball-sort-frontend/" target="_blank" class="ml-auto text-xs text-primary hover:underline font-semibold flex items-center gap-1">
                             Chơi ngay <i class="fas fa-gamepad text-[10px]"></i>
@@ -386,7 +372,7 @@
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-5xl font-bold mb-6">Liên hệ</h2>
             <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-                Nếu bạn cần một giải pháp thiết kế sản phẩm số chuyên nghiệp, một UX/UI Designer đa năng có khả năng xây dựng bản demo tương tác thực tế trên đa thiết bị, vượt qua những giới hạn mô phỏng thông thường của Figma, hãy liên hệ với tôi!
+                Nếu bạn cần một giải pháp thiết kế sản phẩm số chuyên nghiệp, một UX/UI design đa năng, có thể làm demo sản phẩm trên màn hình thật vượt qua các giới hạn của Figma hãy liên hệ với tôi!
             </p>
             
             <a href="mailto:andesign0499@gmail.com" class="inline-block text-2xl md:text-4xl font-bold text-white hover:text-primary transition duration-300 mb-12 border-b-2 border-primary pb-2">
@@ -482,7 +468,7 @@
 
     <footer class="py-8 text-center border-t border-gray-800">
         <p class="text-gray-500 text-sm">
-            &copy; 2026 Hoàng Văn An. Thiết kế với đam mê ♥
+            &copy; 2026 Hoàng Văn An. Thiết kế với ♥
         </p>
     </footer>
 
