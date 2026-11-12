@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Shape=Square-18:18">
+<mask id="stroke0_85_3748" fill="white">
+<path d="M3 4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4Z"/>
+</mask>
+<path id="Square 18:18" d="M4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21Z" stroke-width="4" stroke="#292B33" stroke-opacity="0.2" mask="url(#stroke0_85_3748)"/>
+</g>
+</svg>

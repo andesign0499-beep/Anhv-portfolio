@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Shape=Rectangle-20:16">
+<mask id="stroke0_85_3753" fill="white">
+<path d="M2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V5Z"/>
+</mask>
+<path id="Rectangle Horizontal 20:16" d="M3 20H21C21.5523 20 22 19.5523 22 19V5C22 4.44772 21.5523 4 21 4H3C2.44772 4 2 4.44772 2 5V19C2 19.5523 2.44772 20 3 20Z" stroke-width="4" stroke="#292B33" stroke-opacity="0.2" mask="url(#stroke0_85_3753)"/>
+</g>
+</svg>
