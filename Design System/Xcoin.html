@@ -1,0 +1,3302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xcoin — Crypto Wallet &amp; Web3 Finance (Crypto Typography + 4/8pt + Builcolor)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================================
+       XCOIN CRYPTO WALLET — CRYPTO TYPOGRAPHY + 4/8PT GRID + BUILCOLOR TOKENS
+       Crypto Wallet Font Pairing (Research-Backed Web3/Fintech Standard):
+       - Display / Balances / Screen Titles: 'Space Grotesk' (Web3 precision)
+       - Core UI / Lists / Controls: 'Plus Jakarta Sans' / 'Inter' (Legibility)
+       - Token Tickers / Hashes / Amounts: 'JetBrains Mono' + tabular-nums
+       - Max 4 weights: 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold)
+       ========================================================================= */
+    :root {
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ds-font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-sans: var(--ds-font-sans);
+      --font-mono: 'JetBrains Mono', monospace;
+
+      /* Typography Scale Tokens (from index.html js/foundation.js) */
+      --ds-display-sm-size: 1.75rem;   /* 28px */
+      --ds-display-sm-line: 2.25rem;   /* 36px */
+      --ds-display-xs-size: 1.375rem;  /* 22px */
+      --ds-display-xs-line: 1.875rem;  /* 30px */
+      --ds-text-xl-size: 1.25rem;      /* 20px */
+      --ds-text-xl-line: 1.875rem;     /* 30px */
+      --ds-text-lg-size: 1.125rem;     /* 18px */
+      --ds-text-lg-line: 1.75rem;      /* 28px */
+      --ds-text-md-size: 1rem;         /* 16px */
+      --ds-text-md-line: 1.5rem;       /* 24px */
+      --ds-text-sm-size: 0.875rem;     /* 14px */
+      --ds-text-sm-line: 1.25rem;      /* 20px */
+      --ds-text-xs-size: 0.75rem;      /* 12px */
+      --ds-text-xs-line: 1.125rem;     /* 18px */
+      --ds-text-xxs-size: 0.625rem;    /* 10px */
+      --ds-text-xxs-line: 1rem;        /* 16px */
+
+      /* Neutral Surface Tokens (Builcolor Light Default) */
+      --ds-grey-25: #ffffff;
+      --ds-grey-50: #f8fafc;
+      --ds-grey-100: #f1f5f9;
+      --ds-grey-200: #e2e8f0;
+      --ds-grey-300: #cbd5e1;
+      --ds-grey-500: #64748b;
+      --ds-grey-700: #475569;
+      --ds-grey-900: #1e293b;
+      --ds-grey-1000: #0f172a;
+
+      --bg-app: #eef2ff;
+      --bg-canvas: #f5f7ff;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --border-default: rgba(15, 23, 42, 0.08);
+      --border-strong: rgba(15, 23, 42, 0.14);
+      --text-primary: var(--ds-grey-1000);
+      --text-secondary: var(--ds-grey-700);
+      --text-muted: var(--ds-grey-500);
+
+      /* Brand Tokens (Synced from Builcolor) */
+      --ds-brand-1200: #1e1b4b;
+      --ds-brand-1100: #4338ca;
+      --ds-brand-1000: #4f46e5;
+      --ds-brand-800: #4338ca;
+      --ds-brand-500: #6366f1;
+      --ds-brand-200: #c7d2fe;
+      --ds-brand-50: #eef2ff;
+      --ds-brand-ring: rgba(79, 70, 229, 0.28);
+
+      --brand-primary: var(--ds-brand-1000);
+      --brand-primary-hover: var(--ds-brand-1100);
+      --brand-soft: var(--ds-brand-50);
+      --brand-border: var(--ds-brand-200);
+      --btn-primary-bg: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+      --btn-primary-hover-bg: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+      --btn-primary-shadow: 0 8px 20px rgba(79, 70, 229, 0.34);
+      --btn-primary-color: #ffffff;
+
+      /* System Colors (6 Semantic Groups × 4 Steps — Synced from Builcolor) */
+      --ds-green-1000: #047857;
+      --ds-green-800: #059669;
+      --ds-green-200: #a7f3d0;
+      --ds-green-50: #ecfdf5;
+
+      --ds-red-1000: #dc2626;
+      --ds-red-800: #b91c1c;
+      --ds-red-200: #fecaca;
+      --ds-red-50: #fef2f2;
+
+      --ds-amber-1000: #b45309;
+      --ds-amber-800: #d97706;
+      --ds-amber-200: #fde68a;
+      --ds-amber-50: #fffbeb;
+
+      --ds-teal-1000: #0369a1;
+      --ds-teal-800: #0284c7;
+      --ds-teal-200: #bae6fd;
+      --ds-teal-50: #f0f9ff;
+
+      --ds-orange-1000: #ea580c;
+      --ds-orange-800: #c2410c;
+      --ds-orange-200: #fed7aa;
+      --ds-orange-50: #fff7ed;
+
+      --ds-purple-1000: #7c3aed;
+      --ds-purple-800: #6d28d9;
+      --ds-purple-200: #ddd6fe;
+      --ds-purple-50: #f5f3ff;
+
+      /* Phone Shell & Elevation Shadows */
+      --phone-bezel: #111827;
+      --phone-screen-bg: #f6f7fc;
+      --card-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      --card-border: 1px solid rgba(15, 23, 42, 0.06);
+      --nav-bg: rgba(255, 255, 255, 0.94);
+
+      /* 4pt / 8pt Spacing Scale */
+      --sp-1: 4px;
+      --sp-2: 8px;
+      --sp-3: 12px;
+      --sp-4: 16px;
+      --sp-5: 20px;
+      --sp-6: 24px;
+      --sp-8: 32px;
+    }
+
+    [data-theme="dark"] {
+      /* Elevated Dark (Never #000000) */
+      --ds-grey-25: #0b1120;
+      --ds-grey-50: #111827;
+      --ds-grey-100: #1e293b;
+      --ds-grey-200: #334155;
+      --ds-grey-300: #475569;
+      --ds-grey-500: #94a3b8;
+      --ds-grey-700: #cbd5e1;
+      --ds-grey-900: #e2e8f0;
+      --ds-grey-1000: #f8fafc;
+
+      --bg-app: #090d16;
+      --bg-canvas: #0d1424;
+      --bg-surface: #131c2e;
+      --bg-subtle: #1e293b;
+      --border-default: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+      --text-primary: var(--ds-grey-1000);
+      --text-secondary: var(--ds-grey-700);
+      --text-muted: var(--ds-grey-500);
+
+      --ds-green-1000: #10b981;
+      --ds-green-800: #34d399;
+      --ds-green-200: #065f46;
+      --ds-green-50: #022c22;
+
+      --ds-red-1000: #f87171;
+      --ds-red-800: #ef4444;
+      --ds-red-200: #7f1d1d;
+      --ds-red-50: #450a0a;
+
+      --ds-amber-1000: #f59e0b;
+      --ds-amber-800: #fbbf24;
+      --ds-amber-200: #78350f;
+      --ds-amber-50: #451a03;
+
+      --ds-teal-1000: #38bdf8;
+      --ds-teal-800: #0ea5e9;
+      --ds-teal-200: #075985;
+      --ds-teal-50: #082f49;
+
+      --ds-orange-1000: #fb923c;
+      --ds-orange-800: #fdba74;
+      --ds-orange-200: #7c2d12;
+      --ds-orange-50: #431407;
+
+      --ds-purple-1000: #c084fc;
+      --ds-purple-800: #d8b4fe;
+      --ds-purple-200: #581c87;
+      --ds-purple-50: #1e1b4b;
+
+      --phone-bezel: #0f172a;
+      --phone-screen-bg: #0b1120;
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      --card-border: 1px solid rgba(255, 255, 255, 0.08);
+      --nav-bg: rgba(17, 24, 39, 0.92);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(99, 102, 241, 0.14), transparent 36%),
+        radial-gradient(circle at 88% 82%, rgba(14, 165, 233, 0.12), transparent 38%),
+        var(--bg-app);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* =========================================================================
+       TOP DESIGN SYSTEM STUDIO BAR (8pt Grid)
+       ========================================================================= */
+    .studio-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+      padding: var(--sp-3) var(--sp-6);
+      background: var(--nav-bg);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-default);
+      flex-wrap: wrap;
+    }
+
+    .studio-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .xcoin-logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: var(--ds-text-md-size);
+      line-height: 1;
+      box-shadow: var(--btn-primary-shadow);
+    }
+
+    .studio-brand-title {
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    .studio-brand-sub {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .studio-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10.5px;
+      font-weight: 700;
+      background: var(--ds-green-50);
+      color: var(--ds-green-1000);
+      border: 1px solid var(--ds-green-200);
+    }
+
+    .studio-controls {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      flex-wrap: wrap;
+    }
+
+    .seg-group {
+      display: inline-flex;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-default);
+      border-radius: 10px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .seg-btn {
+      height: 28px;
+      padding: 0 12px;
+      border: none;
+      border-radius: 7px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .seg-btn.is-active {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+    }
+
+    .studio-btn {
+      height: 36px;
+      padding: 0 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-default);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .studio-btn:hover {
+      border-color: var(--brand-primary);
+      transform: translateY(-1px);
+    }
+
+    .studio-btn.primary {
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-color);
+      border-color: transparent;
+      box-shadow: var(--btn-primary-shadow);
+    }
+
+    /* 7-Palette Quick Swatches (Icon-only inside topbar) */
+    .palette-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-default);
+      border-radius: 10px;
+    }
+
+    .palette-chip {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .palette-chip:hover {
+      transform: scale(1.12);
+    }
+
+    .palette-chip.is-active {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 2px var(--ds-brand-ring);
+    }
+
+    .palette-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* =========================================================================
+       SHOWCASE STAGE (5-PHONE RESPONSIVE SINGLE-ROW FLEX)
+       ========================================================================= */
+    .stage-wrapper {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: var(--sp-6) var(--sp-4) var(--sp-8);
+    }
+
+    .phones-stage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .phone-column {
+      flex: 0 0 364px;
+      width: 364px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .phones-stage.is-single .phone-column {
+      display: none;
+    }
+    .phones-stage.is-single .phone-column.is-focused {
+      display: flex;
+      flex: 0 0 400px;
+      width: 400px;
+    }
+
+    .phone-caption {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      box-shadow: var(--card-shadow);
+    }
+
+    /* =========================================================================
+       IPHONE DEVICE FRAME (8pt Proportions — 792px fits all 3 wallets cleanly)
+       ========================================================================= */
+    .iphone-frame {
+      width: 100%;
+      height: 792px;
+      border-radius: 48px;
+      padding: 12px;
+      background: linear-gradient(145deg, #273248 0%, #0f172a 50%, #1e293b 100%);
+      box-shadow:
+        0 28px 60px rgba(15, 23, 42, 0.28),
+        0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .iphone-screen {
+      flex: 1;
+      border-radius: 38px;
+      background: var(--phone-screen-bg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      color: var(--text-primary);
+    }
+
+    /* Status Bar + Dynamic Island */
+    .ios-status-bar {
+      height: 44px;
+      padding: 12px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .dynamic-island {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      width: 104px;
+      height: 26px;
+      border-radius: 999px;
+      background: #090d16;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    .ios-icons {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Screen Header (40px touch buttons, 16px horizontal padding) */
+    .app-header {
+      height: 52px;
+      padding: 0 var(--sp-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .icon-circle-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: var(--card-border);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+      transition: transform 0.12s ease, border-color 0.12s ease;
+    }
+
+    .icon-circle-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--brand-primary);
+    }
+
+    .app-header-title {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-md-size);
+      line-height: var(--ds-text-md-line);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    /* Scrollable App Content */
+    .app-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding: var(--sp-1) var(--sp-4) var(--sp-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+      scrollbar-width: none;
+    }
+    .app-scroll > * {
+      flex-shrink: 0;
+    }
+    .app-scroll::-webkit-scrollbar { display: none; }
+
+    /* =========================================================================
+       SCREEN 1: HOME / CRYPTO WALLET OVERVIEW
+       ========================================================================= */
+    .greeting-block {
+      padding: 2px 0;
+    }
+    .greeting-sub {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .greeting-name {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-xl-size);
+      line-height: var(--ds-text-xl-line);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-top: 2px;
+      color: var(--text-primary);
+    }
+
+    /* Hero Balance Card (Builcolor Gradient + Soft Aurora) */
+    .balance-hero-card {
+      border-radius: 20px;
+      padding: var(--sp-4) var(--sp-5);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(56, 189, 248, 0.42), transparent 52%),
+        var(--btn-primary-bg);
+      color: #ffffff;
+      box-shadow: var(--btn-primary-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .balance-label-row {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
+    .eye-toggle-btn {
+      width: auto;
+      height: auto;
+      padding: 2px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+    }
+    .eye-toggle-btn:hover {
+      opacity: 1;
+      color: #ffffff;
+    }
+
+    .balance-amount {
+      font-family: var(--font-display);
+      font-size: var(--ds-display-sm-size);
+      line-height: var(--ds-display-sm-line);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-top: 4px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .balance-trend {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
+      white-space: nowrap;
+    }
+
+    .balance-btc-pill {
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      font-family: var(--font-mono);
+      font-size: var(--ds-text-xxs-size);
+      line-height: var(--ds-text-xxs-line);
+      font-weight: 600;
+    }
+
+    .balance-wallet-tile {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    /* Section Header */
+    .sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sec-title {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+
+    .sec-link {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      color: var(--brand-primary);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Wallet List Card */
+    .wallet-list-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+
+    .wallet-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--sp-3) 14px;
+      gap: var(--sp-2);
+      cursor: pointer;
+      transition: background 0.14s ease;
+    }
+
+    .wallet-row + .wallet-row {
+      border-top: 1px solid var(--border-default);
+    }
+
+    .wallet-row:hover {
+      background: var(--bg-subtle);
+    }
+
+    .wallet-row-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .wallet-row-left > div:last-child {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .token-icon-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+      font-size: var(--ds-text-sm-size);
+      line-height: 1;
+    }
+
+    .tic-green  { background: var(--ds-green-50);  color: var(--ds-green-1000);  border: 1px solid var(--ds-green-200); }
+    .tic-teal   { background: var(--ds-teal-50);   color: var(--ds-teal-1000);   border: 1px solid var(--ds-teal-200); }
+    .tic-purple { background: var(--ds-purple-50); color: var(--ds-purple-1000); border: 1px solid var(--ds-purple-200); }
+    .tic-orange { background: var(--ds-orange-50); color: var(--ds-orange-1000); border: 1px solid var(--ds-orange-200); }
+    .tic-amber  { background: var(--ds-amber-50);  color: var(--ds-amber-1000);  border: 1px solid var(--ds-amber-200); }
+    .tic-red    { background: var(--ds-red-50);    color: var(--ds-red-1000);    border: 1px solid var(--ds-red-200); }
+
+    .wallet-name {
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wallet-sub {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wallet-row-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    /* Spending / Portfolio Overview Donut Card */
+    .overview-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      padding: var(--sp-3) var(--sp-4);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+
+    .donut-wrap {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .donut-center {
+      position: absolute;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .donut-val {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .donut-lbl {
+      font-size: var(--ds-text-xxs-size);
+      line-height: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .legend-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+    }
+
+    .legend-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .legend-pct {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .month-chip {
+      height: 24px;
+      padding: 0 8px;
+      border-radius: 8px;
+      border: var(--card-border);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    /* =========================================================================
+       SCREEN 2: TRANSACTIONS (All / Income / Expense + Grouped Cards)
+       ========================================================================= */
+    .tx-filter-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      border: var(--card-border);
+      box-shadow: var(--card-shadow);
+    }
+
+    .tx-filter-pill {
+      height: 32px;
+      border: none;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .tx-filter-pill.is-active {
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-color);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.28);
+    }
+
+    .tx-date-label {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .tx-group-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+
+    .tx-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--sp-3) var(--sp-4);
+      gap: var(--sp-3);
+      cursor: pointer;
+      transition: background 0.14s ease;
+    }
+
+    .tx-row + .tx-row {
+      border-top: 1px solid var(--border-default);
+    }
+
+    .tx-row:hover {
+      background: var(--bg-subtle);
+    }
+
+    .tx-right-col {
+      flex-shrink: 0;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .tx-amt-pos {
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      color: var(--ds-green-1000);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .tx-amt-neg {
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      color: var(--ds-red-1000);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .tx-coin-sub {
+      font-size: var(--ds-text-xxs-size);
+      line-height: var(--ds-text-xxs-line);
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+
+    /* =========================================================================
+       SCREEN 3: BUDGET / CRYPTO ALLOCATION LIMITS
+       ========================================================================= */
+    .budget-summary-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      padding: var(--sp-4);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+
+    .budget-top-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: var(--sp-2);
+    }
+
+    .budget-lbl {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .budget-big-val {
+      font-family: var(--font-display);
+      font-size: var(--ds-display-xs-size);
+      line-height: var(--ds-display-xs-line);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.025em;
+      font-variant-numeric: tabular-nums;
+      margin-top: 2px;
+    }
+
+    .budget-spent-val {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      margin-top: 2px;
+      text-align: right;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.35s ease;
+    }
+
+    .cat-list-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+
+    .cat-row {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      padding: 10px var(--sp-4);
+    }
+
+    .cat-row + .cat-row {
+      border-top: 1px solid var(--border-default);
+    }
+
+    .cat-body {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-2);
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .cat-head > span:first-child {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cat-head > span:last-child {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+    }
+
+    .cat-sub {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 400;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Extra Scrollable Crypto Sections (Quick Actions, Market Watchlist, Guard Rules) */
+    .quick-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-2);
+    }
+    .qa-btn {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 14px;
+      padding: 10px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      color: var(--text-primary);
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      transition: transform 0.12s ease, border-color 0.12s ease;
+    }
+    .qa-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--brand-primary);
+    }
+    .qa-icon-wrap {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mkt-pct-up {
+      font-size: var(--ds-text-xxs-size);
+      line-height: var(--ds-text-xxs-line);
+      font-weight: 600;
+      color: var(--ds-green-1000);
+      background: var(--ds-green-50);
+      border: 1px solid var(--ds-green-200);
+      padding: 1px 6px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .mkt-pct-down {
+      font-size: var(--ds-text-xxs-size);
+      line-height: var(--ds-text-xxs-line);
+      font-weight: 600;
+      color: var(--ds-red-1000);
+      background: var(--ds-red-50);
+      border: 1px solid var(--ds-red-200);
+      padding: 1px 6px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .security-banner-card {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      padding: var(--sp-3) var(--sp-4);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-3);
+    }
+
+    /* =========================================================================
+       BOTTOM TAB BAR + CENTER FLOATING '+' FAB (5-SLOT 8PT NAVIGATION)
+       ========================================================================= */
+    .bottom-nav {
+      height: 68px;
+      padding: 6px var(--sp-2) 12px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-default);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .nav-tab-btn {
+      border: none;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.15s ease;
+    }
+
+    .nav-tab-btn.is-active {
+      color: var(--brand-primary);
+    }
+
+    .nav-fab-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-fab-btn {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      line-height: 0;
+      border-radius: 999px;
+      border: none;
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-color);
+      box-shadow: var(--btn-primary-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 500;
+      cursor: pointer;
+      transform: translateY(-6px);
+      transition: transform 0.15s ease;
+    }
+
+    .nav-fab-btn svg {
+      transform: translate(-0.5px, 0.5px);
+    }
+
+    .nav-fab-btn:hover {
+      transform: translateY(-8px) scale(1.04);
+    }
+
+    /* =========================================================================
+       QUICK ACTION MODAL (+ SEND / SWAP / DEPOSIT CRYPTO)
+       ========================================================================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.55);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: var(--sp-4);
+    }
+
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 400px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: 20px;
+      padding: var(--sp-5);
+      box-shadow: 0 24px 48px rgba(15, 23, 42, 0.28);
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+
+    .modal-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .modal-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .modal-input,
+    .modal-select {
+      height: 40px;
+      padding: 0 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .modal-input:focus,
+    .modal-select:focus {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px var(--ds-brand-ring);
+    }
+
+    /* =========================================================================
+       SCREEN 4: SEND CRYPTO
+       ========================================================================= */
+    .send-field-label {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .send-card-box {
+      background: var(--bg-surface);
+      border: var(--card-border);
+      border-radius: 16px;
+      padding: 14px var(--sp-4);
+      box-shadow: var(--card-shadow);
+    }
+
+    .send-recipient-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-3);
+      cursor: pointer;
+    }
+
+    .avatar-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--btn-primary-bg);
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.22);
+    }
+
+    .send-amount-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-2);
+    }
+
+    .send-amount-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: var(--ds-display-sm-size);
+      line-height: var(--ds-display-sm-line);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+      outline: none;
+      min-width: 0;
+    }
+
+    .send-currency-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: var(--card-border);
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+      font-size: var(--ds-text-xs-size);
+      font-weight: 600;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .send-presets-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-2);
+    }
+
+    .send-preset-pill {
+      height: 36px;
+      border-radius: 999px;
+      border: var(--card-border);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: var(--ds-text-xs-size);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .send-preset-pill.is-active {
+      background: var(--btn-primary-bg);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: var(--btn-primary-shadow);
+    }
+
+    .send-note-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 500;
+      outline: none;
+      margin-top: 4px;
+    }
+
+    .send-cta-btn {
+      width: 100%;
+      height: 48px;
+      border-radius: 999px;
+      border: none;
+      background: var(--btn-primary-bg);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: var(--ds-text-sm-size);
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--btn-primary-shadow);
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    .send-cta-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* =========================================================================
+       SCREEN 5: PROFILE
+       ========================================================================= */
+    .profile-hero-header {
+      background:
+        radial-gradient(circle at 86% 88%, rgba(56, 189, 248, 0.45), transparent 52%),
+        var(--btn-primary-bg);
+      color: #ffffff;
+      border-radius: 0 0 28px 28px;
+      padding-bottom: var(--sp-5);
+      flex-shrink: 0;
+      box-shadow: var(--btn-primary-shadow);
+    }
+
+    .profile-hero-header .ios-status-bar {
+      color: #ffffff;
+    }
+
+    .profile-hero-header .dynamic-island {
+      background: #090d16;
+    }
+
+    .profile-top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px var(--sp-4) var(--sp-3);
+    }
+
+    .profile-ghost-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .profile-user-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 var(--sp-5);
+    }
+
+    .profile-avatar-lg {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .profile-avatar-lg img,
+    .drawer-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-user-name {
+      font-family: var(--font-display);
+      font-size: var(--ds-text-lg-size);
+      line-height: var(--ds-text-lg-line);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    .profile-user-email {
+      font-size: var(--ds-text-xs-size);
+      line-height: var(--ds-text-xs-line);
+      color: rgba(255, 255, 255, 0.88);
+      margin-top: 2px;
+    }
+
+    .profile-menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .profile-menu-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: var(--bg-surface);
+      border: var(--card-border);
+      box-shadow: var(--card-shadow);
+      cursor: pointer;
+      transition: transform 0.12s ease, border-color 0.12s ease;
+    }
+
+    .profile-menu-row:hover {
+      transform: translateY(-1px);
+      border-color: var(--brand-primary);
+    }
+
+    .profile-menu-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: var(--ds-text-sm-size);
+      line-height: var(--ds-text-sm-line);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .profile-menu-ico {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--bg-brand-subtle);
+      color: var(--brand-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .profile-logout-btn {
+      width: 100%;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(239, 68, 68, 0.16);
+      background: rgba(239, 68, 68, 0.08);
+      color: var(--ds-red-1000, #ef4444);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: var(--ds-text-sm-size);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .profile-logout-btn:hover {
+      background: rgba(239, 68, 68, 0.14);
+    }
+
+    /* =========================================================================
+       HOME SLIDE-OUT DRAWER MENU
+       ========================================================================= */
+    .drawer-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.45);
+      backdrop-filter: blur(3px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 40;
+    }
+
+    .drawer-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .home-drawer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 82%;
+      max-width: 296px;
+      background: var(--bg-surface);
+      border-right: var(--card-border);
+      box-shadow: 16px 0 40px rgba(15, 23, 42, 0.22);
+      transform: translateX(-105%);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      padding: 48px var(--sp-4) var(--sp-4);
+    }
+
+    .home-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--sp-3);
+    }
+
+    .drawer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: var(--ds-text-md-size);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .drawer-wallet-card {
+      background:
+        radial-gradient(circle at 86% 18%, rgba(56, 189, 248, 0.35), transparent 55%),
+        var(--btn-primary-bg);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin-bottom: var(--sp-3);
+      box-shadow: var(--btn-primary-shadow);
+    }
+
+    .drawer-wallet-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .drawer-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .drawer-addr-pill {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.16);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .drawer-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      scrollbar-width: none;
+    }
+    .drawer-scroll::-webkit-scrollbar { display: none; }
+
+    .drawer-section-lbl {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 10px 6px 4px;
+    }
+
+    .drawer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 12px;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: var(--ds-text-sm-size);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      text-align: left;
+    }
+
+    .drawer-item:hover,
+    .drawer-item.is-active {
+      background: var(--bg-brand-subtle);
+      color: var(--brand-primary);
+    }
+
+    .drawer-item-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .drawer-badge {
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      border: var(--card-border);
+      flex-shrink: 0;
+    }
+
+    .drawer-badge.is-live {
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border-color: rgba(16, 185, 129, 0.22);
+    }
+
+    .drawer-footer {
+      padding-top: 10px;
+      border-top: var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Toast */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      font-weight: 600;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: 300;
+      pointer-events: none;
+    }
+    .toast-pill.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Studio Controls (Single Icon-Only Row) -->
+  <header class="studio-topbar">
+    <div class="studio-brand" title="Xcoin — Crypto Wallet Demo">
+      <div class="xcoin-logo-mark">
+        <img src="Logo/Logo_destudio_icon_white.svg" alt="DeStudio" style="width:22px;height:22px;display:block;" />
+      </div>
+    </div>
+
+    <div class="studio-controls">
+      <div class="palette-bar" id="xcoinPaletteBar" aria-label="Color Palettes"></div>
+
+      <div class="seg-group" aria-label="Font Pairing">
+        <button type="button" class="seg-btn is-active" id="btnFontWeb3" onclick="setFontPairing('web3')" title="Web3 Pro (Space Grotesk + Plus Jakarta Sans)" style="padding:0 9px;display:inline-flex;align-items:center;">
+          <span data-ds-icon="text-capital-t" data-ds-size="15" style="display:inline-flex;"></span>
+        </button>
+        <button type="button" class="seg-btn" id="btnFontFintech" onclick="setFontPairing('fintech')" title="Fintech Clean (Plus Jakarta Sans + Inter)" style="padding:0 9px;display:inline-flex;align-items:center;">
+          <span data-ds-icon="font-size-tt" data-ds-size="15" style="display:inline-flex;"></span>
+        </button>
+      </div>
+
+      <div class="seg-group" aria-label="Layout Mode">
+        <button type="button" class="seg-btn is-active" id="btnViewAll3" onclick="setShowcaseMode('all3')" title="All 5 Screens" style="padding:0 9px;display:inline-flex;align-items:center;">
+          <span data-ds-icon="grid-cards" data-ds-size="15" data-ds-style="filled" style="display:inline-flex;"></span>
+        </button>
+        <button type="button" class="seg-btn" id="btnViewSingle" onclick="setShowcaseMode('single')" title="Single Device" style="padding:0 9px;display:inline-flex;align-items:center;">
+          <span data-ds-icon="smartphone" data-ds-size="15" style="display:inline-flex;"></span>
+        </button>
+      </div>
+
+      <button type="button" class="studio-btn" id="btnThemeToggle" onclick="toggleTheme()" title="Toggle Light / Dark Mode" style="width:36px;padding:0;justify-content:center;">
+        <span data-ds-icon="moon-dark" data-ds-size="16" style="display:inline-flex;"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main 5-Phone Responsive Showcase Stage -->
+  <main class="stage-wrapper">
+    <div class="phones-stage" id="phonesStage">
+
+      <!-- ===================================================================
+           PHONE 1: HOME / WALLET OVERVIEW
+           =================================================================== -->
+      <div class="phone-column is-focused" id="colScreenHome">
+        <div class="phone-caption">1. Wallet Home • Overview</div>
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="ios-status-bar">
+              <span>9:41</span>
+              <div class="dynamic-island"></div>
+              <div class="ios-icons">
+                <svg width="15" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="1" y="7" width="3" height="5" rx="1"/><rect x="6" y="5" width="3" height="7" rx="1"/><rect x="11" y="2" width="3" height="10" rx="1"/><rect x="16" y="0" width="2" height="12" rx="1" opacity="0.35"/></svg>
+                <svg width="14" height="11" viewBox="0 0 16 12" fill="currentColor"><path d="M8 9.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3.5-2a5 5 0 0 1 7 0l-1.1 1.1a3.5 3.5 0 0 0-4.8 0L4.5 7.5zm-3-3a9.2 9.2 0 0 1 13 0l-1.1 1.1a7.7 7.7 0 0 0-10.8 0L1.5 4.5z"/></svg>
+                <svg width="20" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="2" width="18" height="8" rx="2"/><rect x="3" y="4" width="14" height="4" rx="1" fill="currentColor"/><path d="M21 4.5v3" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+
+            <div class="app-header">
+              <button type="button" class="icon-circle-btn" onclick="openHomeMenu()" title="Open Wallet Menu">
+                <span data-ds-icon="list-menu" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+              <button type="button" class="icon-circle-btn" onclick="showToast('2 Staking Rewards Credited')" title="Notifications">
+                <span data-ds-icon="bell-status" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+            </div>
+
+            <!-- Slide-Out Crypto Wallet Drawer Menu (opens from left) -->
+            <div class="drawer-backdrop" id="homeDrawerBackdrop" onclick="closeHomeMenu()"></div>
+            <aside class="home-drawer" id="homeDrawer" aria-label="Wallet Menu">
+              <div class="drawer-head">
+                <div class="drawer-brand">
+                  <span class="xcoin-logo-mark" style="width:28px;height:28px;border-radius:9px;">
+                    <img src="Logo/Logo_destudio_icon_white.svg" alt="DeStudio" style="width:17px;height:17px;display:block;" />
+                  </span>
+                  <span>Xcoin Menu</span>
+                </div>
+                <button type="button" class="icon-circle-btn" style="width:30px;height:30px;border-radius:9px;" onclick="closeHomeMenu()" title="Close Menu">
+                  <span data-ds-icon="chevron-left" data-ds-size="15" style="display:inline-flex;"></span>
+                </button>
+              </div>
+
+              <div class="drawer-scroll">
+                <div class="drawer-section-lbl">Wallet &amp; Networks</div>
+                <button type="button" class="drawer-item is-active" onclick="closeHomeMenu(); focusScreen('home')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="wallet" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Portfolio &amp; Assets</span>
+                  </span>
+                  <span class="drawer-badge is-live">Mainnet</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="showToast('Active: Ethereum, Arbitrum, Solana')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="globe-web" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Networks</span>
+                  </span>
+                  <span class="drawer-badge">3 Active</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="showToast('Connected dApps: Uniswap v4, Aave')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="link" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Connected dApps</span>
+                  </span>
+                  <span class="drawer-badge">2</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="closeHomeMenu(); focusScreen('send')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="user" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Address Book</span>
+                  </span>
+                </button>
+
+                <div class="drawer-section-lbl">Earn &amp; Security</div>
+                <button type="button" class="drawer-item" onclick="showToast('Staking Pool: 3.85 ETH @ 4.6% APY')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="trending-up" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Staking &amp; Yield</span>
+                  </span>
+                  <span class="drawer-badge is-live">4.6% APY</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="showToast('Ledger Nano X + Multi-Sig Guard Active')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="shield-check" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Hardware Vault</span>
+                  </span>
+                </button>
+                <button type="button" class="drawer-item" onclick="showToast('Seed Phrase Encrypted &amp; Backed Up')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="lock" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Recovery &amp; Keys</span>
+                  </span>
+                </button>
+
+                <div class="drawer-section-lbl">Preferences</div>
+                <button type="button" class="drawer-item" onclick="showToast('Display Currency: USD ($)')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="coin-vertical" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Currency</span>
+                  </span>
+                  <span class="drawer-badge">USD</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="toggleTheme()">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="sliders-tune" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Appearance</span>
+                  </span>
+                  <span class="drawer-badge">Theme</span>
+                </button>
+                <button type="button" class="drawer-item" onclick="closeHomeMenu(); focusScreen('profile')">
+                  <span class="drawer-item-left">
+                    <span data-ds-icon="info-circle" data-ds-size="16" style="display:inline-flex;"></span>
+                    <span>Help &amp; Profile</span>
+                  </span>
+                </button>
+              </div>
+
+              <div class="drawer-footer">
+                <button type="button" class="profile-logout-btn" style="height:38px;font-size:12.5px;" onclick="closeHomeMenu(); showToast('Wallet locked safely')">
+                  <span data-ds-icon="logout-exit" data-ds-size="15" style="display:inline-flex;"></span>
+                  <span>Lock Wallet</span>
+                </button>
+                <div style="text-align:center;font-size:10.5px;color:var(--text-muted);">Xcoin v2.4.0 • Audited by CertiK</div>
+              </div>
+            </aside>
+
+            <div class="app-scroll">
+              <div class="greeting-block">
+                <div class="greeting-sub">Good Morning,</div>
+                <div class="greeting-name">Liam Carter 👋</div>
+              </div>
+
+              <!-- Total Crypto Balance Hero Card -->
+              <div class="balance-hero-card">
+                <div style="min-width:0;">
+                  <div class="balance-label-row">
+                    <span>Total Crypto Balance</span>
+                    <span class="balance-btc-pill">0.362 BTC</span>
+                    <button type="button" class="eye-toggle-btn" id="btnEyeMask" onclick="toggleBalanceMask()" title="Hide/Show Balance">
+                      <span data-ds-icon="eye" data-ds-size="14" style="display:inline-flex;"></span>
+                    </button>
+                  </div>
+                  <div class="balance-amount" id="homeTotalBalance">$24,560.50</div>
+                  <div class="balance-trend">
+                    <span data-ds-icon="arrow-up" data-ds-size="12" style="display:inline-flex;"></span>
+                    <span>+12.5% from last month</span>
+                  </div>
+                </div>
+                <button type="button" class="balance-wallet-tile" onclick="openQuickModal()" title="Quick Deposit / Swap">
+                  <span data-ds-icon="wallet" data-ds-size="22" style="display:inline-flex;"></span>
+                </button>
+              </div>
+
+              <!-- Accounts / Wallets -->
+              <div class="sec-head">
+                <span class="sec-title">Crypto Wallets</span>
+                <button type="button" class="sec-link" onclick="focusScreen('tx')">See All</button>
+              </div>
+
+              <div class="wallet-list-card">
+                <div class="wallet-row" onclick="showToast('Spot Wallet: 0.142 BTC + 2,400 USDT')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-green" data-ds-icon="bitcoin-btc" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Spot Wallet (BTC)</div>
+                      <div class="wallet-sub">0.1420 BTC • Liquid</div>
+                    </div>
+                  </div>
+                  <div class="wallet-row-right">
+                    <span class="maskable-val">$8,540.00</span>
+                    <span data-ds-icon="chevron-right-single" data-ds-size="14" data-ds-style="filled" style="color:var(--text-muted);display:inline-flex;"></span>
+                  </div>
+                </div>
+
+                <div class="wallet-row" onclick="showToast('Staking Vault: 3.85 ETH @ 4.6% APY')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-teal" data-ds-icon="ethereum-eth" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Staking Vault (ETH)</div>
+                      <div class="wallet-sub">3.850 ETH • 4.6% APY</div>
+                    </div>
+                  </div>
+                  <div class="wallet-row-right">
+                    <span class="maskable-val">$10,250.00</span>
+                    <span data-ds-icon="chevron-right-single" data-ds-size="14" data-ds-style="filled" style="color:var(--text-muted);display:inline-flex;"></span>
+                  </div>
+                </div>
+
+                <div class="wallet-row" onclick="showToast('Web3 DeFi Pool: SOL &amp; USDC')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-purple" data-ds-icon="solana-sol" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">DeFi Yield (SOL)</div>
+                      <div class="wallet-sub">32.40 SOL • LP Pool</div>
+                    </div>
+                  </div>
+                  <div class="wallet-row-right">
+                    <span class="maskable-val">$5,770.50</span>
+                    <span data-ds-icon="chevron-right-single" data-ds-size="14" data-ds-style="filled" style="color:var(--text-muted);display:inline-flex;"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Spending / Allocation Overview Donut -->
+              <div class="sec-head">
+                <span class="sec-title">Spending Overview</span>
+                <button type="button" class="month-chip" onclick="showToast('Filtered: This Month (May 2026)')">
+                  <span>This Month</span>
+                  <span data-ds-icon="chevron-down" data-ds-size="12" style="display:inline-flex;"></span>
+                </button>
+              </div>
+
+              <div class="overview-card">
+                <div class="donut-wrap">
+                  <svg width="116" height="116" viewBox="0 0 120 120" style="transform:rotate(-90deg);">
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--bg-subtle)" stroke-width="14"/>
+                    <!-- 40% Purple -->
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--ds-purple-1000)" stroke-width="14" stroke-dasharray="110.58 276.46" stroke-dashoffset="0" stroke-linecap="round"/>
+                    <!-- 25% Brand -->
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--brand-primary)" stroke-width="14" stroke-dasharray="69.11 276.46" stroke-dashoffset="-110.58"/>
+                    <!-- 15% Teal -->
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--ds-teal-1000)" stroke-width="14" stroke-dasharray="41.47 276.46" stroke-dashoffset="-179.69"/>
+                    <!-- 10% Amber -->
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--ds-amber-1000)" stroke-width="14" stroke-dasharray="27.65 276.46" stroke-dashoffset="-221.16"/>
+                    <!-- 10% Green -->
+                    <circle cx="60" cy="60" r="44" fill="none" stroke="var(--ds-green-1000)" stroke-width="14" stroke-dasharray="27.65 276.46" stroke-dashoffset="-248.81"/>
+                  </svg>
+                  <div class="donut-center">
+                    <div class="donut-val maskable-val" id="donutTotalSpent">$2,890.50</div>
+                    <div class="donut-lbl">Total Spent</div>
+                  </div>
+                </div>
+
+                <div class="legend-list">
+                  <div class="legend-item">
+                    <span class="legend-left"><span class="legend-dot" style="background:var(--ds-purple-1000);"></span>Token Swaps</span>
+                    <span class="legend-pct">40%</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-left"><span class="legend-dot" style="background:var(--brand-primary);"></span>DCA Auto-Buy</span>
+                    <span class="legend-pct">25%</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-left"><span class="legend-dot" style="background:var(--ds-teal-1000);"></span>Gas &amp; Bridge</span>
+                    <span class="legend-pct">15%</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-left"><span class="legend-dot" style="background:var(--ds-amber-1000);"></span>Bills &amp; Card</span>
+                    <span class="legend-pct">10%</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-left"><span class="legend-dot" style="background:var(--ds-green-1000);"></span>Others</span>
+                    <span class="legend-pct">10%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Scrollable Section 1: Quick Crypto Actions -->
+              <div class="sec-head" style="margin-top:4px;">
+                <span class="sec-title">Quick Actions</span>
+                <span style="font-size:var(--ds-text-xs-size); color:var(--text-muted); font-family:var(--font-mono);">Gas: 14 Gwei</span>
+              </div>
+
+              <div class="quick-actions-grid">
+                <button type="button" class="qa-btn" onclick="focusScreen('send')">
+                  <span class="qa-icon-wrap tic-purple" data-ds-icon="send-paper-plane" data-ds-size="16"></span>
+                  <span>Send</span>
+                </button>
+                <button type="button" class="qa-btn" onclick="showToast('Copied EVM Wallet Address: 0x71C...9A4B')">
+                  <span class="qa-icon-wrap tic-green" data-ds-icon="arrow-circle-down" data-ds-size="16"></span>
+                  <span>Receive</span>
+                </button>
+                <button type="button" class="qa-btn" onclick="openQuickModal()">
+                  <span class="qa-icon-wrap tic-teal" data-ds-icon="arrow-swap-horizontal" data-ds-size="16"></span>
+                  <span>Swap</span>
+                </button>
+                <button type="button" class="qa-btn" onclick="showToast('Staking APY up to 6.8% on ETH &amp; SOL')">
+                  <span class="qa-icon-wrap tic-amber" data-ds-icon="trending-up" data-ds-size="16"></span>
+                  <span>Stake</span>
+                </button>
+              </div>
+
+              <!-- Scrollable Section 2: Live Market Watchlist -->
+              <div class="sec-head" style="margin-top:4px;">
+                <span class="sec-title">Market Watchlist</span>
+                <button type="button" class="sec-link" onclick="showToast('Live prices synced via CoinGecko Oracle')">24h Change</button>
+              </div>
+
+              <div class="wallet-list-card">
+                <div class="wallet-row" onclick="showToast('Bitcoin (BTC): $67,420.00 (+2.84%)')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-orange" data-ds-icon="bitcoin-btc" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Bitcoin</div>
+                      <div class="wallet-sub">BTC • Layer 1</div>
+                    </div>
+                  </div>
+                  <div style="text-align:right; flex-shrink:0;">
+                    <div class="wallet-name" style="font-variant-numeric:tabular-nums;">$67,420.00</div>
+                    <span class="mkt-pct-up">+2.84%</span>
+                  </div>
+                </div>
+                <div class="wallet-row" onclick="showToast('Ethereum (ETH): $3,145.80 (+4.12%)')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-teal" data-ds-icon="ethereum-eth" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Ethereum</div>
+                      <div class="wallet-sub">ETH • Smart Contracts</div>
+                    </div>
+                  </div>
+                  <div style="text-align:right; flex-shrink:0;">
+                    <div class="wallet-name" style="font-variant-numeric:tabular-nums;">$3,145.80</div>
+                    <span class="mkt-pct-up">+4.12%</span>
+                  </div>
+                </div>
+                <div class="wallet-row" onclick="showToast('Solana (SOL): $178.10 (-1.25%)')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-purple" data-ds-icon="solana-sol" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Solana</div>
+                      <div class="wallet-sub">SOL • High Throughput</div>
+                    </div>
+                  </div>
+                  <div style="text-align:right; flex-shrink:0;">
+                    <div class="wallet-name" style="font-variant-numeric:tabular-nums;">$178.10</div>
+                    <span class="mkt-pct-down">-1.25%</span>
+                  </div>
+                </div>
+                <div class="wallet-row" onclick="showToast('Tether (USDT): $1.00 (+0.01%)')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-green" data-ds-icon="usdt-tether" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Tether USD</div>
+                      <div class="wallet-sub">USDT • Stablecoin</div>
+                    </div>
+                  </div>
+                  <div style="text-align:right; flex-shrink:0;">
+                    <div class="wallet-name" style="font-variant-numeric:tabular-nums;">$1.00</div>
+                    <span class="mkt-pct-up">+0.01%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Scrollable Section 3: Wallet Security Guard -->
+              <div class="security-banner-card">
+                <div class="wallet-row-left">
+                  <div class="token-icon-circle tic-green" data-ds-icon="shield-check" data-ds-size="18"></div>
+                  <div>
+                    <div class="wallet-name">Hardware Guard Active</div>
+                    <div class="wallet-sub">2FA + Multi-sig signing enabled</div>
+                  </div>
+                </div>
+                <span class="mkt-pct-up">Protected</span>
+              </div>
+            </div>
+
+            <!-- Bottom Tab Bar -->
+            <nav class="bottom-nav">
+              <button type="button" class="nav-tab-btn is-active" onclick="focusScreen('home')">
+                <span data-ds-icon="home" data-ds-size="18" data-ds-style="filled" style="display:inline-flex;"></span>
+                <span>Home</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('tx')">
+                <span data-ds-icon="receipt-document" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Transactions</span>
+              </button>
+              <div class="nav-fab-wrap">
+                <button type="button" class="nav-fab-btn" onclick="focusScreen('send')" title="Send Crypto">
+                  <span data-ds-icon="send-paper-plane" data-ds-size="19" data-ds-style="filled" style="display:inline-flex;"></span>
+                </button>
+              </div>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('budget')">
+                <span data-ds-icon="chart-pie" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Budget</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('profile')">
+                <span data-ds-icon="user" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Profile</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           PHONE 2: TRANSACTIONS (ON-CHAIN & FIAT BRIDGE HISTORY)
+           =================================================================== -->
+      <div class="phone-column" id="colScreenTx">
+        <div class="phone-caption">2. Transactions • History</div>
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="ios-status-bar">
+              <span>9:41</span>
+              <div class="dynamic-island"></div>
+              <div class="ios-icons">
+                <svg width="15" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="1" y="7" width="3" height="5" rx="1"/><rect x="6" y="5" width="3" height="7" rx="1"/><rect x="11" y="2" width="3" height="10" rx="1"/><rect x="16" y="0" width="2" height="12" rx="1" opacity="0.35"/></svg>
+                <svg width="14" height="11" viewBox="0 0 16 12" fill="currentColor"><path d="M8 9.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3.5-2a5 5 0 0 1 7 0l-1.1 1.1a3.5 3.5 0 0 0-4.8 0L4.5 7.5zm-3-3a9.2 9.2 0 0 1 13 0l-1.1 1.1a7.7 7.7 0 0 0-10.8 0L1.5 4.5z"/></svg>
+                <svg width="20" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="2" width="18" height="8" rx="2"/><rect x="3" y="4" width="14" height="4" rx="1" fill="currentColor"/><path d="M21 4.5v3" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+
+            <div class="app-header">
+              <button type="button" class="icon-circle-btn" onclick="focusScreen('home')" title="Back">
+                <span data-ds-icon="chevron-left" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+              <span class="app-header-title">Transactions</span>
+              <button type="button" class="icon-circle-btn" onclick="cycleTxFilter()" title="Cycle Filter">
+                <span data-ds-icon="filter-funnel" data-ds-size="16" style="display:inline-flex;"></span>
+              </button>
+            </div>
+
+            <div class="app-scroll">
+              <!-- Segmented Filter Pills (All / Income / Expense) -->
+              <div class="tx-filter-bar">
+                <button type="button" class="tx-filter-pill is-active" data-filter="all" onclick="setTxFilter('all', this)">All</button>
+                <button type="button" class="tx-filter-pill" data-filter="income" onclick="setTxFilter('income', this)">Income</button>
+                <button type="button" class="tx-filter-pill" data-filter="expense" onclick="setTxFilter('expense', this)">Expense</button>
+              </div>
+
+              <div id="txListContainer" style="display:flex; flex-direction:column; gap:16px;">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
+
+            <!-- Bottom Tab Bar -->
+            <nav class="bottom-nav">
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('home')">
+                <span data-ds-icon="home" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Home</span>
+              </button>
+              <button type="button" class="nav-tab-btn is-active" onclick="focusScreen('tx')">
+                <span data-ds-icon="receipt-document" data-ds-size="18" data-ds-style="filled" style="display:inline-flex;"></span>
+                <span>Transactions</span>
+              </button>
+              <div class="nav-fab-wrap">
+                <button type="button" class="nav-fab-btn" onclick="focusScreen('send')" title="Send Crypto">
+                  <span data-ds-icon="send-paper-plane" data-ds-size="19" data-ds-style="filled" style="display:inline-flex;"></span>
+                </button>
+              </div>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('budget')">
+                <span data-ds-icon="chart-pie" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Budget</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('profile')">
+                <span data-ds-icon="user" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Profile</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           PHONE 3: BUDGET / CRYPTO SPENDING & ALLOCATION LIMITS
+           =================================================================== -->
+      <div class="phone-column" id="colScreenBudget">
+        <div class="phone-caption">3. Budget • Allocation</div>
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="ios-status-bar">
+              <span>9:41</span>
+              <div class="dynamic-island"></div>
+              <div class="ios-icons">
+                <svg width="15" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="1" y="7" width="3" height="5" rx="1"/><rect x="6" y="5" width="3" height="7" rx="1"/><rect x="11" y="2" width="3" height="10" rx="1"/><rect x="16" y="0" width="2" height="12" rx="1" opacity="0.35"/></svg>
+                <svg width="14" height="11" viewBox="0 0 16 12" fill="currentColor"><path d="M8 9.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3.5-2a5 5 0 0 1 7 0l-1.1 1.1a3.5 3.5 0 0 0-4.8 0L4.5 7.5zm-3-3a9.2 9.2 0 0 1 13 0l-1.1 1.1a7.7 7.7 0 0 0-10.8 0L1.5 4.5z"/></svg>
+                <svg width="20" height="11" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="2" width="18" height="8" rx="2"/><rect x="3" y="4" width="14" height="4" rx="1" fill="currentColor"/><path d="M21 4.5v3" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+
+            <div class="app-header">
+              <button type="button" class="icon-circle-btn" onclick="focusScreen('home')" title="Menu">
+                <span data-ds-icon="list-menu" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+              <span class="app-header-title">Budget</span>
+              <button type="button" class="icon-circle-btn" onclick="showToast('Monthly Cap: $3,200.00 Auto-Guard Active')" title="Budget Options">
+                <span data-ds-icon="more-vertical" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+            </div>
+
+            <div class="app-scroll">
+              <!-- Monthly Budget Summary Card -->
+              <div class="budget-summary-card">
+                <div class="budget-top-row">
+                  <div>
+                    <div class="budget-lbl">Monthly Crypto Budget</div>
+                    <div class="budget-big-val maskable-val">$3,200.00</div>
+                  </div>
+                  <div>
+                    <div class="budget-lbl" style="text-align:right;">Spent</div>
+                    <div class="budget-spent-val maskable-val" id="budgetTotalSpent">$2,400.00</div>
+                  </div>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="budgetMainBar" style="width:75%; background:var(--btn-primary-bg);"></div>
+                </div>
+                <div style="font-size:var(--ds-text-xs-size); line-height:var(--ds-text-xs-line); color:var(--text-secondary); font-weight:500;" id="budgetUsedLabel">
+                  75% of monthly allocation used
+                </div>
+              </div>
+
+              <!-- Categories -->
+              <div class="sec-head">
+                <span class="sec-title">Categories</span>
+                <button type="button" class="sec-link" onclick="showToast('Viewing all 5 Crypto Budget Rules')">See All</button>
+              </div>
+
+              <div class="cat-list-card" id="budgetCategoriesList">
+                <!-- Rendered by JS -->
+              </div>
+
+              <!-- Scrollable Section: Smart Auto-Guard Rules -->
+              <div class="sec-head" style="margin-top:4px;">
+                <span class="sec-title">Smart Auto-Guard Rules</span>
+                <button type="button" class="sec-link" onclick="showToast('All 3 On-Chain Guard Rules Active')">Manage</button>
+              </div>
+
+              <div class="wallet-list-card">
+                <div class="wallet-row" onclick="showToast('Gas Spike Guard: Pauses auto-swaps when Gwei > 40')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-amber" data-ds-icon="alert-triangle" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Gas Spike Alert</div>
+                      <div class="wallet-sub">Pause swaps if &gt; 40 Gwei</div>
+                    </div>
+                  </div>
+                  <span class="mkt-pct-up">Active</span>
+                </div>
+                <div class="wallet-row" onclick="showToast('Daily Swap Cap: Limited to $1,000 / 24h')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-teal" data-ds-icon="lock" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Daily Swap Cap</div>
+                      <div class="wallet-sub">Max $1,000.00 per 24h</div>
+                    </div>
+                  </div>
+                  <span class="mkt-pct-up">Active</span>
+                </div>
+                <div class="wallet-row" onclick="showToast('Auto-DCA: $80 BTC every Monday at 09:00 UTC')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-purple" data-ds-icon="refresh-sync" data-ds-size="18"></div>
+                    <div>
+                      <div class="wallet-name">Weekly BTC Auto-DCA</div>
+                      <div class="wallet-sub">Every Mon • $80.00</div>
+                    </div>
+                  </div>
+                  <span class="mkt-pct-up">Scheduled</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tab Bar -->
+            <nav class="bottom-nav">
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('home')">
+                <span data-ds-icon="home" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Home</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('tx')">
+                <span data-ds-icon="receipt-document" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Transactions</span>
+              </button>
+              <div class="nav-fab-wrap">
+                <button type="button" class="nav-fab-btn" onclick="focusScreen('send')" title="Send Crypto">
+                  <span data-ds-icon="send-paper-plane" data-ds-size="19" data-ds-style="filled" style="display:inline-flex;"></span>
+                </button>
+              </div>
+              <button type="button" class="nav-tab-btn is-active" onclick="focusScreen('budget')">
+                <span data-ds-icon="chart-pie" data-ds-size="18" data-ds-style="filled" style="display:inline-flex;"></span>
+                <span>Budget</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('profile')">
+                <span data-ds-icon="user" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Profile</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           PHONE 4: SEND CRYPTO
+           =================================================================== -->
+      <div class="phone-column" id="colScreenSend">
+        <div class="phone-caption">4. Send • Crypto Transfer</div>
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="ios-status-bar">
+              <span>9:41</span>
+              <div class="dynamic-island"></div>
+              <div class="ios-icons">
+                <svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor"><rect x="0" y="6" width="2.5" height="4" rx="0.8"/><rect x="3.5" y="4" width="2.5" height="6" rx="0.8"/><rect x="7" y="2" width="2.5" height="8" rx="0.8"/><rect x="10.5" y="0" width="2.5" height="10" rx="0.8"/></svg>
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1 3.5a9 9 0 0 1 12 0M3.2 6a5.8 5.8 0 0 1 7.6 0M5.8 8.5a2 2 0 0 1 2.4 0"/></svg>
+                <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x="0.5" y="0.8" width="16" height="8.4" rx="2.2" stroke="currentColor" stroke-opacity="0.4"/><rect x="2" y="2.2" width="13" height="5.6" rx="1.2" fill="currentColor"/><path d="M17.5 3.5v3a1.2 1.2 0 0 0 0-3z" fill="currentColor" fill-opacity="0.5"/></svg>
+              </div>
+            </div>
+
+            <div class="app-header">
+              <button type="button" class="icon-circle-btn" onclick="focusScreen('home')" title="Back">
+                <span data-ds-icon="chevron-left" data-ds-size="18" style="display:inline-flex;"></span>
+              </button>
+              <span class="app-header-title">Send Crypto</span>
+              <div style="width:36px;"></div>
+            </div>
+
+            <div class="app-scroll" style="gap:14px;">
+              <div>
+                <div class="send-field-label">To</div>
+                <div class="send-card-box send-recipient-row" onclick="cycleSendRecipient()">
+                  <div class="wallet-row-left">
+                    <div class="avatar-circle" id="sendRecipAvatar">RI</div>
+                    <div>
+                      <div class="wallet-name" id="sendRecipName">Rafi Islam</div>
+                      <div class="wallet-sub" id="sendRecipAddr">rafi.eth • 0x71C...9A4</div>
+                    </div>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="16" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+              </div>
+
+              <div>
+                <div class="send-field-label">Amount</div>
+                <div class="send-card-box">
+                  <div class="send-amount-row">
+                    <input type="text" class="send-amount-input" id="sendAmountInput" value="$120.00" aria-label="Send Amount" />
+                    <button type="button" class="send-currency-btn" onclick="cycleSendCurrency()">
+                      <span id="sendCurrencyLabel">USD</span>
+                      <span data-ds-icon="chevron-down" data-ds-size="12" style="display:inline-flex;"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="send-presets-row">
+                <button type="button" class="send-preset-pill" onclick="selectSendPreset(50, this)">$50</button>
+                <button type="button" class="send-preset-pill is-active" onclick="selectSendPreset(100, this)">$100</button>
+                <button type="button" class="send-preset-pill" onclick="selectSendPreset(200, this)">$200</button>
+                <button type="button" class="send-preset-pill" onclick="selectSendPreset(500, this)">$500</button>
+              </div>
+
+              <div class="send-card-box">
+                <div class="send-field-label" style="margin-bottom:2px;">Add a note (optional)</div>
+                <input type="text" class="send-note-input" id="sendNoteInput" value="Dinner 🍽️" placeholder="Add a note or tx memo..." />
+              </div>
+
+              <button type="button" class="send-cta-btn" onclick="submitSendCrypto()">Send Now</button>
+
+              <!-- Extra Scrollable Network & Gas Summary -->
+              <div class="wallet-list-card" style="margin-top:2px;">
+                <div class="wallet-row" onclick="showToast('Network: Arbitrum One (L2)')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle tic-teal" data-ds-icon="globe-web" data-ds-size="16"></div>
+                    <div>
+                      <div class="wallet-name">Network Route</div>
+                      <div class="wallet-sub">Arbitrum One • Instant L2</div>
+                    </div>
+                  </div>
+                  <span class="mkt-pct-up">~$0.18 Gas</span>
+                </div>
+              </div>
+            </div>
+
+            <nav class="bottom-nav">
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('home')">
+                <span data-ds-icon="home" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Home</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('tx')">
+                <span data-ds-icon="receipt-document" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Transactions</span>
+              </button>
+              <div class="nav-fab-wrap">
+                <button type="button" class="nav-fab-btn" onclick="focusScreen('send')" title="Send Crypto">
+                  <span data-ds-icon="send-paper-plane" data-ds-size="19" data-ds-style="filled" style="display:inline-flex;"></span>
+                </button>
+              </div>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('budget')">
+                <span data-ds-icon="chart-pie" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Budget</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('profile')">
+                <span data-ds-icon="user" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Profile</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================================================
+           PHONE 5: PROFILE & ACCOUNT SETTINGS
+           =================================================================== -->
+      <div class="phone-column" id="colScreenProfile">
+        <div class="phone-caption">5. Profile • Account &amp; Security</div>
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="profile-hero-header">
+              <div class="ios-status-bar">
+                <span>9:41</span>
+                <div class="dynamic-island"></div>
+                <div class="ios-icons">
+                  <svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor"><rect x="0" y="6" width="2.5" height="4" rx="0.8"/><rect x="3.5" y="4" width="2.5" height="6" rx="0.8"/><rect x="7" y="2" width="2.5" height="8" rx="0.8"/><rect x="10.5" y="0" width="2.5" height="10" rx="0.8"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1 3.5a9 9 0 0 1 12 0M3.2 6a5.8 5.8 0 0 1 7.6 0M5.8 8.5a2 2 0 0 1 2.4 0"/></svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x="0.5" y="0.8" width="16" height="8.4" rx="2.2" stroke="currentColor" stroke-opacity="0.65"/><rect x="2" y="2.2" width="13" height="5.6" rx="1.2" fill="currentColor"/><path d="M17.5 3.5v3a1.2 1.2 0 0 0 0-3z" fill="currentColor" fill-opacity="0.7"/></svg>
+                </div>
+              </div>
+
+              <div class="profile-top-actions">
+                <button type="button" class="profile-ghost-btn" onclick="focusScreen('home')" title="Back">
+                  <span data-ds-icon="chevron-left" data-ds-size="16" style="display:inline-flex;"></span>
+                </button>
+                <button type="button" class="profile-ghost-btn" onclick="showToast('Wallet Preferences & RPC Settings')" title="Settings">
+                  <span data-ds-icon="settings-gear" data-ds-size="16" style="display:inline-flex;"></span>
+                </button>
+              </div>
+
+              <div class="profile-user-row">
+                <div class="profile-avatar-lg"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=160&amp;q=80" alt="Liam Carter" /></div>
+                <div>
+                  <div class="profile-user-name">Liam Carter</div>
+                  <div class="profile-user-email">liam@xcoin.io • 0x71C...4F2</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-scroll" style="padding-top:14px;">
+              <div class="profile-menu-list">
+                <div class="profile-menu-row" onclick="showToast('KYC Tier 2 Verified • Daily Limit $50,000')">
+                  <div class="profile-menu-left">
+                    <span class="profile-menu-ico" data-ds-icon="user" data-ds-size="16"></span>
+                    <span>Personal Information</span>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="15" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+
+                <div class="profile-menu-row" onclick="showToast('Hardware Key + Biometric 2FA Active')">
+                  <div class="profile-menu-left">
+                    <span class="profile-menu-ico" data-ds-icon="shield-check" data-ds-size="16"></span>
+                    <span>Security &amp; Privacy</span>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="15" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+
+                <div class="profile-menu-row" onclick="showToast('Price & Gas Alerts Enabled')">
+                  <div class="profile-menu-left">
+                    <span class="profile-menu-ico" data-ds-icon="bell-status" data-ds-size="16"></span>
+                    <span>Notifications</span>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="15" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+
+                <div class="profile-menu-row" onclick="showToast('24/7 Web3 Concierge Support')">
+                  <div class="profile-menu-left">
+                    <span class="profile-menu-ico" data-ds-icon="info-circle" data-ds-size="16"></span>
+                    <span>Help &amp; Support</span>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="15" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+
+                <div class="profile-menu-row" onclick="showToast('Xcoin Wallet v2.4.0 • Audited')">
+                  <div class="profile-menu-left">
+                    <span class="profile-menu-ico" data-ds-icon="book-open" data-ds-size="16"></span>
+                    <span>About Xcoin</span>
+                  </div>
+                  <span data-ds-icon="chevron-right-single" data-ds-size="15" style="color:var(--text-muted);display:inline-flex;"></span>
+                </div>
+              </div>
+
+              <button type="button" class="profile-logout-btn" onclick="showToast('Wallet session locked safely')">
+                <span data-ds-icon="logout-exit" data-ds-size="16" style="display:inline-flex;"></span>
+                <span>Log Out</span>
+              </button>
+            </div>
+
+            <nav class="bottom-nav">
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('home')">
+                <span data-ds-icon="home" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Home</span>
+              </button>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('tx')">
+                <span data-ds-icon="receipt-document" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Transactions</span>
+              </button>
+              <div class="nav-fab-wrap">
+                <button type="button" class="nav-fab-btn" onclick="focusScreen('send')" title="Send Crypto">
+                  <span data-ds-icon="send-paper-plane" data-ds-size="19" data-ds-style="filled" style="display:inline-flex;"></span>
+                </button>
+              </div>
+              <button type="button" class="nav-tab-btn" onclick="focusScreen('budget')">
+                <span data-ds-icon="chart-pie" data-ds-size="18" style="display:inline-flex;"></span>
+                <span>Budget</span>
+              </button>
+              <button type="button" class="nav-tab-btn is-active" onclick="focusScreen('profile')">
+                <span data-ds-icon="user" data-ds-size="18" data-ds-style="filled" style="display:inline-flex;"></span>
+                <span>Profile</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Quick Add / Swap Crypto Modal -->
+  <div class="modal-backdrop" id="quickTxModal" onclick="if(event.target===this) closeQuickModal()">
+    <div class="modal-card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <div style="font-size:16px; font-weight:700; display:flex; align-items:center; gap:6px;">
+            <span data-ds-icon="zap-flash" data-ds-size="16" style="color:var(--brand-primary);display:inline-flex;"></span>
+            <span>Quick Crypto Action</span>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); margin-top:2px;">Add an instant Income or Expense to Xcoin Wallet</div>
+        </div>
+        <button type="button" class="icon-circle-btn" onclick="closeQuickModal()">
+          <span data-ds-icon="xmark" data-ds-size="16" style="display:inline-flex;"></span>
+        </button>
+      </div>
+
+      <div class="modal-field">
+        <label class="modal-label" for="inpTxTitle">Transaction Label</label>
+        <input type="text" id="inpTxTitle" class="modal-input" value="USDT → ETH Instant Swap">
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <div class="modal-field">
+          <label class="modal-label" for="inpTxType">Type</label>
+          <select id="inpTxType" class="modal-select">
+            <option value="expense">Expense / Swap (-)</option>
+            <option value="income">Income / Reward (+)</option>
+          </select>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label" for="inpTxAmt">Amount (USD)</label>
+          <input type="number" id="inpTxAmt" class="modal-input" value="125.00" min="1" step="0.01">
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:4px;">
+        <button type="button" class="studio-btn" onclick="closeQuickModal()">Cancel</button>
+        <button type="button" class="studio-btn primary" onclick="submitQuickTx()">Confirm &amp; Sync</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-pill" id="toastPill">Synced!</div>
+
+  <script src="icons-bundle.js"></script>
+  <script>
+    // =========================================================================
+    // 0. DE STUDIO ICONS HELPER (Reads directly from icons-bundle.js)
+    // =========================================================================
+    const DS_ICONS_MAP = (function buildDsIconMap() {
+      const map = {};
+      const list = Array.isArray(window.USER_ICONS_BUNDLE) ? window.USER_ICONS_BUNDLE : [];
+      list.forEach(item => {
+        if (item && item.slug) map[item.slug] = item;
+      });
+      return map;
+    })();
+
+    function dsIcon(slug, size = 18, styleKey = 'outlined') {
+      const ic = DS_ICONS_MAP[slug];
+      if (!ic || !ic.variants) return '';
+      const variant = ic.variants[styleKey] || ic.variants[ic.defaultStyle] || ic.variants.outlined || ic.variants.filled;
+      if (!variant || !variant.body) return '';
+      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" style="display:block;flex-shrink:0;">${variant.body}</svg>`;
+    }
+
+    function hydrateStaticIcons() {
+      document.querySelectorAll('[data-ds-icon]').forEach(el => {
+        const slug = el.getAttribute('data-ds-icon');
+        const size = parseInt(el.getAttribute('data-ds-size') || '18', 10);
+        const styleKey = el.getAttribute('data-ds-style') || 'outlined';
+        const svg = dsIcon(slug, size, styleKey);
+        if (svg) el.innerHTML = svg;
+      });
+    }
+
+    // =========================================================================
+    // 1. STATE & CRYPTO DATA
+    // =========================================================================
+    const xcoinState = {
+      theme: localStorage.getItem('xcoin_theme') || 'light',
+      showcaseMode: 'all3', // 'all3' | 'single'
+      focusedScreen: 'home', // 'home' | 'tx' | 'budget'
+      balanceMasked: false,
+      totalBalance: 24560.50,
+      txFilter: 'all',
+      transactions: [
+        { group: 'Today', title: 'BTC Swap → USDT', sub: 'Spot • ERC-20', coin: '-0.0010 BTC', amount: -68.50, type: 'expense', color: 'tic-green', icon: 'arrow-swap-horizontal' },
+        { group: 'Today', title: 'ETH Staking Reward', sub: 'Income • Validator', coin: '+0.0082 ETH', amount: 25.00, type: 'income', color: 'tic-teal', icon: 'arrow-circle-down' },
+        { group: 'Yesterday', title: 'NFT Mint & Marketplace', sub: 'Token Swaps', coin: '-0.0390 ETH', amount: -120.00, type: 'expense', color: 'tic-purple', icon: 'diamond-vip' },
+        { group: 'Yesterday', title: 'USDT Treasury Deposit', sub: 'Income • Tron TRC20', coin: '+2,500 USDT', amount: 2500.00, type: 'income', color: 'tic-teal', icon: 'wallet' },
+        { group: '22 May 2026', title: 'Network Gas Fee', sub: 'Gas & Bridge', coin: '-0.0245 ETH', amount: -75.50, type: 'expense', color: 'tic-orange', icon: 'zap-flash' },
+        { group: '22 May 2026', title: 'Xcoin Visa Crypto Card', sub: 'Bills & Card', coin: '-18.40 USDC', amount: -18.40, type: 'expense', color: 'tic-amber', icon: 'credit-card' },
+        { group: '19 May 2026', title: 'SOL Liquidity Pool Yield', sub: 'Income • DeFi Vault', coin: '+0.798 SOL', amount: 142.30, type: 'income', color: 'tic-green', icon: 'trending-up' },
+        { group: '19 May 2026', title: 'USDC Cross-Chain Bridge', sub: 'Arbitrum → Base', coin: '-450.00 USDC', amount: -450.00, type: 'expense', color: 'tic-teal', icon: 'send-paper-plane' },
+        { group: '15 May 2026', title: 'Fiat On-Ramp Top-Up', sub: 'Income • Bank Transfer', coin: '+1,200 USDT', amount: 1200.00, type: 'income', color: 'tic-green', icon: 'bank-building' },
+        { group: '15 May 2026', title: 'ENS Domain Renewal', sub: 'Web3 Identity • 1 Yr', coin: '-0.0076 ETH', amount: -24.00, type: 'expense', color: 'tic-purple', icon: 'globe-web' }
+      ],
+      budgetCategories: [
+        { name: 'Token Swaps', spent: 1120, limit: 1500, pct: 75, colorClass: 'tic-purple', barColor: 'var(--ds-purple-1000)', icon: 'arrow-swap-horizontal' },
+        { name: 'Gas & Network Fees', spent: 640, limit: 800, pct: 80, colorClass: 'tic-orange', barColor: 'var(--ds-orange-1000)', icon: 'zap-flash' },
+        { name: 'DCA Auto-Buy (BTC/ETH)', spent: 320, limit: 500, pct: 64, colorClass: 'tic-teal', barColor: 'var(--ds-teal-1000)', icon: 'coin-vertical' },
+        { name: 'Bills & Crypto Card', spent: 250, limit: 400, pct: 62, colorClass: 'tic-amber', barColor: 'var(--ds-amber-1000)', icon: 'credit-card' },
+        { name: 'DeFi & Subscriptions', spent: 150, limit: 300, pct: 50, colorClass: 'tic-green', barColor: 'var(--ds-green-1000)', icon: 'sparkles' },
+        { name: 'Cross-Chain Bridges', spent: 180, limit: 400, pct: 45, colorClass: 'tic-teal', barColor: 'var(--ds-teal-1000)', icon: 'send-paper-plane' },
+        { name: 'Cold Vault Allocation', spent: 220, limit: 500, pct: 44, colorClass: 'tic-purple', barColor: 'var(--ds-purple-1000)', icon: 'shield-check' }
+      ]
+    };
+
+    // =========================================================================
+    // 2. BUILCOLOR SYNCHRONIZATION ENGINE (Brand + Gradient + Neutral + System)
+    // =========================================================================
+    function syncColorsFromBuilcolor() {
+      const isDark = xcoinState.theme === 'dark';
+      const root = document.documentElement;
+
+      // Brand Palette
+      try {
+        const rawBrand = localStorage.getItem('de_studio_active_brand_palette');
+        if (rawBrand) {
+          const pal = JSON.parse(rawBrand);
+          if (pal && pal.shades) {
+            Object.keys(pal.shades).forEach(scale => {
+              const val = isDark ? (pal.shades[scale].dark || pal.shades[scale].light) : pal.shades[scale].light;
+              if (val) root.style.setProperty(`--ds-brand-${scale}`, val);
+            });
+            const s1000 = isDark ? (pal.shades['1000']?.dark || pal.shades['1000']?.light) : pal.shades['1000']?.light;
+            const s1100 = isDark ? (pal.shades['1100']?.dark || pal.shades['1100']?.light) : pal.shades['1100']?.light;
+            const s50   = isDark ? (pal.shades['50']?.dark || pal.shades['50']?.light) : pal.shades['50']?.light;
+            const s200  = isDark ? (pal.shades['200']?.dark || pal.shades['200']?.light) : pal.shades['200']?.light;
+            const sRing = isDark ? (pal.shades['ring']?.dark || pal.shades['ring']?.light) : pal.shades['ring']?.light;
+            if (s1000) root.style.setProperty('--brand-primary', s1000);
+            if (s1100) root.style.setProperty('--brand-primary-hover', s1100);
+            if (s50)   root.style.setProperty('--brand-soft', s50);
+            if (s200)  root.style.setProperty('--brand-border', s200);
+            if (sRing) root.style.setProperty('--ds-brand-ring', sRing);
+          }
+          if (pal && pal.neutralShades) applyNeutralShades(pal.neutralShades, isDark, root);
+          if (pal && pal.systemShades) applySystemShades(pal.systemShades, isDark, root);
+          if (pal && pal.buttonGradient) applyButtonGradient(pal.buttonGradient, isDark, root);
+        }
+      } catch (e) {}
+
+      // Standalone Neutral Palette
+      try {
+        const rawNeutral = localStorage.getItem('de_studio_active_neutral_palette');
+        if (rawNeutral) {
+          const npal = JSON.parse(rawNeutral);
+          if (npal && npal.shades) applyNeutralShades(npal.shades, isDark, root);
+        }
+      } catch (e) {}
+
+      // Standalone System Colors Palette
+      try {
+        const rawSys = localStorage.getItem('de_studio_active_system_palette');
+        if (rawSys) {
+          const spal = JSON.parse(rawSys);
+          if (spal && spal.shades) applySystemShades(spal.shades, isDark, root);
+        }
+      } catch (e) {}
+
+      // Standalone Button Gradient
+      try {
+        const rawGrad = localStorage.getItem('de_studio_active_button_gradient');
+        if (rawGrad) {
+          const grad = JSON.parse(rawGrad);
+          if (grad) applyButtonGradient(grad, isDark, root);
+        }
+      } catch (e) {}
+    }
+
+    function applyNeutralShades(shades, isDark, root) {
+      Object.keys(shades).forEach(scale => {
+        const val = isDark ? (shades[scale].dark || shades[scale].light) : shades[scale].light;
+        if (val) root.style.setProperty(`--ds-grey-${scale}`, val);
+      });
+      const g25   = isDark ? (shades['25']?.dark || '#0b1120')   : (shades['25']?.light || '#ffffff');
+      const g50   = isDark ? (shades['50']?.dark || '#111827')   : (shades['50']?.light || '#f8fafc');
+      const g100  = isDark ? (shades['100']?.dark || '#1e293b')  : (shades['100']?.light || '#f1f5f9');
+      const g500  = isDark ? (shades['500']?.dark || '#94a3b8')  : (shades['500']?.light || '#64748b');
+      const g700  = isDark ? (shades['700']?.dark || '#cbd5e1')  : (shades['700']?.light || '#475569');
+      const g1000 = isDark ? (shades['1000']?.dark || '#f8fafc') : (shades['1000']?.light || '#0f172a');
+
+      root.style.setProperty('--phone-screen-bg', g50);
+      root.style.setProperty('--bg-surface', g25);
+      root.style.setProperty('--bg-subtle', g100);
+      root.style.setProperty('--text-primary', g1000);
+      root.style.setProperty('--text-secondary', g700);
+      root.style.setProperty('--text-muted', g500);
+    }
+
+    function applySystemShades(sysShades, isDark, root) {
+      ['red', 'amber', 'green', 'teal', 'orange', 'purple'].forEach(gid => {
+        const grp = sysShades[gid];
+        if (!grp) return;
+        Object.keys(grp).forEach(sc => {
+          const val = isDark ? (grp[sc].dark || grp[sc].light) : grp[sc].light;
+          if (val) root.style.setProperty(`--ds-${gid}-${sc}`, val);
+        });
+      });
+    }
+
+    function applyButtonGradient(grad, isDark, root) {
+      const bgGrad = isDark ? (grad.dark || grad.light || grad.cssGradient) : (grad.light || grad.cssGradient);
+      const bgHover = isDark ? (grad.darkHover || grad.lightHover || grad.cssHover) : (grad.lightHover || grad.cssHover);
+      const shadow = isDark ? (grad.darkShadow || grad.lightShadow || grad.shadow) : (grad.lightShadow || grad.shadow);
+      const txt = isDark ? (grad.darkText || grad.color || '#ffffff') : (grad.lightText || grad.color || '#ffffff');
+      if (bgGrad) root.style.setProperty('--btn-primary-bg', bgGrad);
+      if (bgHover) root.style.setProperty('--btn-primary-hover-bg', bgHover);
+      if (shadow) root.style.setProperty('--btn-primary-shadow', shadow);
+      if (txt) root.style.setProperty('--btn-primary-color', txt);
+    }
+
+    // =========================================================================
+    // 3. RENDERERS & INTERACTIVE CONTROLS
+    // =========================================================================
+    function formatUsd(val) {
+      return '$' + Math.abs(val).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function renderTransactions() {
+      const container = document.getElementById('txListContainer');
+      if (!container) return;
+
+      const filtered = xcoinState.transactions.filter(item => {
+        if (xcoinState.txFilter === 'all') return true;
+        return item.type === xcoinState.txFilter;
+      });
+
+      const groups = {};
+      filtered.forEach(tx => {
+        if (!groups[tx.group]) groups[tx.group] = [];
+        groups[tx.group].push(tx);
+      });
+
+      const groupKeys = Object.keys(groups);
+      if (!groupKeys.length) {
+        container.innerHTML = `<div class="tx-group-card" style="padding:24px; text-align:center; color:var(--text-muted); font-size:12.5px;">No transactions match this filter.</div>`;
+        return;
+      }
+
+      container.innerHTML = groupKeys.map(gName => `
+        <div>
+          <div class="tx-date-label">${gName}</div>
+          <div class="tx-group-card">
+            ${groups[gName].map(tx => {
+              const isPos = tx.amount >= 0;
+              const amtStr = (isPos ? '+' : '-') + formatUsd(tx.amount);
+              return `
+                <div class="tx-row" onclick="showToast('${tx.title}: ${amtStr} (${tx.coin})')">
+                  <div class="wallet-row-left">
+                    <div class="token-icon-circle ${tx.color}">${dsIcon(tx.icon, 18)}</div>
+                    <div>
+                      <div class="wallet-name">${tx.title}</div>
+                      <div class="wallet-sub">${tx.sub}</div>
+                    </div>
+                  </div>
+                  <div class="tx-right-col">
+                    <div class="${isPos ? 'tx-amt-pos' : 'tx-amt-neg'} maskable-val">${amtStr}</div>
+                    <div class="tx-coin-sub">${tx.coin}</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      applyBalanceMaskUI();
+    }
+
+    function renderBudgetCategories() {
+      const container = document.getElementById('budgetCategoriesList');
+      if (!container) return;
+
+      container.innerHTML = xcoinState.budgetCategories.map(cat => `
+        <div class="cat-row">
+          <div class="token-icon-circle ${cat.colorClass}">${dsIcon(cat.icon, 18)}</div>
+          <div class="cat-body">
+            <div class="cat-head">
+              <span>${cat.name}</span>
+              <span>${cat.pct}%</span>
+            </div>
+            <div class="progress-track" style="height:6px;">
+              <div class="progress-fill" style="width:${Math.min(100, cat.pct)}%; background:${cat.barColor};"></div>
+            </div>
+            <div class="cat-sub maskable-val">${formatUsd(cat.spent)} / ${formatUsd(cat.limit)}</div>
+          </div>
+        </div>
+      `).join('');
+
+      applyBalanceMaskUI();
+    }
+
+    function setTxFilter(filter, btn) {
+      xcoinState.txFilter = filter;
+      document.querySelectorAll('.tx-filter-pill').forEach(b => b.classList.remove('is-active'));
+      if (btn) btn.classList.add('is-active');
+      renderTransactions();
+    }
+
+    function cycleTxFilter() {
+      const order = ['all', 'income', 'expense'];
+      const next = order[(order.indexOf(xcoinState.txFilter) + 1) % order.length];
+      const btn = document.querySelector(`.tx-filter-pill[data-filter="${next}"]`);
+      setTxFilter(next, btn);
+      showToast(`Filter: ${next.toUpperCase()}`);
+    }
+
+    function toggleBalanceMask() {
+      xcoinState.balanceMasked = !xcoinState.balanceMasked;
+      applyBalanceMaskUI();
+      const eyeBtn = document.getElementById('btnEyeMask');
+      if (eyeBtn) {
+        eyeBtn.innerHTML = dsIcon(xcoinState.balanceMasked ? 'eye-off' : 'eye', 14);
+      }
+      showToast(xcoinState.balanceMasked ? 'Balances hidden' : 'Balances visible');
+    }
+
+    function applyBalanceMaskUI() {
+      const balEl = document.getElementById('homeTotalBalance');
+      if (balEl) {
+        balEl.textContent = xcoinState.balanceMasked ? '••••••••' : formatUsd(xcoinState.totalBalance);
+      }
+      document.querySelectorAll('.maskable-val').forEach(el => {
+        if (el.id === 'homeTotalBalance') return;
+        if (!el.dataset.raw) el.dataset.raw = el.textContent;
+        el.textContent = xcoinState.balanceMasked ? '••••••' : el.dataset.raw;
+      });
+    }
+
+    function openHomeMenu() {
+      document.getElementById('homeDrawerBackdrop')?.classList.add('is-open');
+      document.getElementById('homeDrawer')?.classList.add('is-open');
+    }
+
+    function closeHomeMenu() {
+      document.getElementById('homeDrawerBackdrop')?.classList.remove('is-open');
+      document.getElementById('homeDrawer')?.classList.remove('is-open');
+    }
+
+    function setShowcaseMode(mode) {
+      xcoinState.showcaseMode = mode;
+      const stage = document.getElementById('phonesStage');
+      const bAll = document.getElementById('btnViewAll3');
+      const bOne = document.getElementById('btnViewSingle');
+      if (stage) stage.classList.toggle('is-single', mode === 'single');
+      if (bAll) bAll.classList.toggle('is-active', mode === 'all3');
+      if (bOne) bOne.classList.toggle('is-active', mode === 'single');
+    }
+
+    function focusScreen(screen) {
+      xcoinState.focusedScreen = screen;
+      const map = {
+        home: 'colScreenHome',
+        tx: 'colScreenTx',
+        budget: 'colScreenBudget',
+        send: 'colScreenSend',
+        profile: 'colScreenProfile'
+      };
+      document.querySelectorAll('.phone-column').forEach(c => c.classList.remove('is-focused'));
+      const target = document.getElementById(map[screen] || 'colScreenHome');
+      if (target) {
+        target.classList.add('is-focused');
+        if (xcoinState.showcaseMode === 'all3') {
+          target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    }
+
+    const sendRecipients = [
+      { initials: 'RI', name: 'Rafi Islam', addr: 'rafi.eth • 0x71C...9A4' },
+      { initials: 'EV', name: 'Elena Vance', addr: 'elena.sol • 7xKp...3M2' },
+      { initials: 'MC', name: 'Marcus Chen', addr: 'marcus@xcoin.io • 0x89F...2B1' }
+    ];
+    let sendRecipientIdx = 0;
+    const sendCurrencies = ['USD', 'USDT', 'ETH', 'BTC'];
+    let sendCurrencyIdx = 0;
+
+    function cycleSendRecipient() {
+      sendRecipientIdx = (sendRecipientIdx + 1) % sendRecipients.length;
+      const r = sendRecipients[sendRecipientIdx];
+      document.getElementById('sendRecipAvatar').textContent = r.initials;
+      document.getElementById('sendRecipName').textContent = r.name;
+      document.getElementById('sendRecipAddr').textContent = r.addr;
+    }
+
+    function cycleSendCurrency() {
+      sendCurrencyIdx = (sendCurrencyIdx + 1) % sendCurrencies.length;
+      document.getElementById('sendCurrencyLabel').textContent = sendCurrencies[sendCurrencyIdx];
+    }
+
+    function selectSendPreset(amount, btn) {
+      document.querySelectorAll('.send-preset-pill').forEach(p => p.classList.remove('is-active'));
+      if (btn) btn.classList.add('is-active');
+      const input = document.getElementById('sendAmountInput');
+      if (input) input.value = '$' + amount.toFixed(2);
+    }
+
+    function submitSendCrypto() {
+      const raw = (document.getElementById('sendAmountInput').value || '').replace(/[^0-9.]/g, '');
+      const amt = parseFloat(raw) || 120;
+      const recipient = document.getElementById('sendRecipName').textContent || 'Rafi Islam';
+      const note = (document.getElementById('sendNoteInput').value || '').trim();
+      const currency = document.getElementById('sendCurrencyLabel').textContent || 'USD';
+
+      xcoinState.totalBalance = Math.max(0, xcoinState.totalBalance - amt);
+      xcoinState.transactions.unshift({
+        group: 'Today',
+        title: `Sent to ${recipient}`,
+        sub: note ? `Transfer • ${note}` : 'Transfer • Arbitrum One',
+        coin: `-${(amt / 3100).toFixed(4)} ETH`,
+        amount: -amt,
+        type: 'expense',
+        color: 'tic-purple',
+        icon: 'send-paper-plane'
+      });
+
+      document.getElementById('homeTotalBalance').textContent = formatUsd(xcoinState.totalBalance);
+      renderTransactions();
+      showToast(`✓ Sent ${formatUsd(amt)} (${currency}) to ${recipient}`);
+    }
+
+    function toggleTheme() {
+      xcoinState.theme = xcoinState.theme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', xcoinState.theme);
+      localStorage.setItem('xcoin_theme', xcoinState.theme);
+      const btn = document.getElementById('btnThemeToggle');
+      if (btn) btn.innerHTML = dsIcon(xcoinState.theme === 'dark' ? 'sun-light' : 'moon-dark', 16);
+      syncColorsFromBuilcolor();
+      applyPresetPalette(localStorage.getItem('xcoin_palette_id') || 'destudio-blue', true);
+      showToast(xcoinState.theme === 'dark' ? '🌙 Elevated Dark Mode' : '☀️ Crisp Light Mode');
+    }
+
+    function openQuickModal() {
+      document.getElementById('quickTxModal').classList.add('is-open');
+    }
+
+    function closeQuickModal() {
+      document.getElementById('quickTxModal').classList.remove('is-open');
+    }
+
+    function submitQuickTx() {
+      const title = document.getElementById('inpTxTitle').value.trim() || 'Crypto Transfer';
+      const type = document.getElementById('inpTxType').value;
+      const rawAmt = parseFloat(document.getElementById('inpTxAmt').value) || 50;
+      const signedAmt = type === 'income' ? Math.abs(rawAmt) : -Math.abs(rawAmt);
+
+      xcoinState.totalBalance += signedAmt;
+      xcoinState.transactions.unshift({
+        group: 'Today',
+        title,
+        sub: type === 'income' ? 'Income • Instant' : 'Swap • Mainnet',
+        coin: (type === 'income' ? '+' : '-') + (rawAmt / 3100).toFixed(4) + ' ETH',
+        amount: signedAmt,
+        type,
+        color: type === 'income' ? 'tic-green' : 'tic-purple',
+        icon: type === 'income' ? 'arrow-circle-down' : 'arrow-swap-horizontal'
+      });
+
+      document.getElementById('homeTotalBalance').textContent = formatUsd(xcoinState.totalBalance);
+      renderTransactions();
+      closeQuickModal();
+      showToast(`✓ Added ${title} (${signedAmt >= 0 ? '+' : '-'}${formatUsd(rawAmt)})`);
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('toastPill');
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(window.__xcoinToastTimer);
+      window.__xcoinToastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+    }
+
+    // Listen to live Builcolor updates across tabs
+    window.addEventListener('storage', function(e) {
+      if (!e.key || e.key.startsWith('de_studio_')) {
+        syncColorsFromBuilcolor();
+        showToast('⚡ Colors updated live from Builcolor!');
+      }
+    });
+
+    if (typeof BroadcastChannel !== 'undefined') {
+      try {
+        const bc = new BroadcastChannel('de_studio_color_sync');
+        bc.onmessage = function(ev) {
+          if (ev && ev.data && ev.data.type === 'BUILCOLOR_APPLY_ALL') {
+            syncColorsFromBuilcolor();
+            showToast('⚡ Colors updated live from Builcolor!');
+          }
+        };
+      } catch (e) {}
+    }
+
+    function setFontPairing(mode) {
+      const root = document.documentElement;
+      const bW = document.getElementById('btnFontWeb3');
+      const bF = document.getElementById('btnFontFintech');
+      if (mode === 'fintech') {
+        root.style.setProperty('--font-display', "'Plus Jakarta Sans', 'Inter', sans-serif");
+        root.style.setProperty('--ds-font-sans', "'Inter', -apple-system, BlinkMacSystemFont, sans-serif");
+        root.style.setProperty('--font-sans', "'Inter', -apple-system, BlinkMacSystemFont, sans-serif");
+        if (bW) bW.classList.remove('is-active');
+        if (bF) bF.classList.add('is-active');
+        showToast('Font: Fintech Clean (Plus Jakarta Sans + Inter)');
+      } else {
+        root.style.setProperty('--font-display', "'Space Grotesk', 'Plus Jakarta Sans', sans-serif");
+        root.style.setProperty('--ds-font-sans', "'Plus Jakarta Sans', 'Inter', sans-serif");
+        root.style.setProperty('--font-sans', "'Plus Jakarta Sans', 'Inter', sans-serif");
+        if (bW) bW.classList.add('is-active');
+        if (bF) bF.classList.remove('is-active');
+        showToast('Font: Web3 Pro (Space Grotesk + Plus Jakarta Sans)');
+      }
+      localStorage.setItem('xcoin_font_pairing', mode);
+    }
+
+    function syncTypographyFromDeStudio() {
+      try {
+        const raw = localStorage.getItem('de_studio_typography_v1');
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        const root = document.documentElement;
+        if (parsed && parsed.fontFamily) {
+          const stack = `"${parsed.fontFamily}", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+          root.style.setProperty('--ds-font-sans', stack);
+          root.style.setProperty('--font-sans', stack);
+        }
+        if (parsed && Array.isArray(parsed.scales)) {
+          parsed.scales.forEach(s => {
+            if (s.id && s.sizePx && s.linePx) {
+              const sizeRem = Math.round((s.sizePx / 16) * 1000) / 1000;
+              const lineRem = Math.round((s.linePx / 16) * 1000) / 1000;
+              root.style.setProperty(`--ds-${s.id}-size`, `${sizeRem}rem`);
+              root.style.setProperty(`--ds-${s.id}-line`, `${lineRem}rem`);
+            }
+          });
+        }
+      } catch (e) {}
+    }
+
+    // Compact OKLCH Auto-Neutral Engine (Synced from Builcolor.html)
+    function _srgbToLin(c) { return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }
+    function _linToSrgb(c) { return c <= 0.0031308 ? c * 12.92 : 1.055 * Math.pow(Math.max(0, c), 1 / 2.4) - 0.055; }
+    function _hexToHue(hex) {
+      let h = hex.replace('#', '');
+      if (h.length === 3) h = h.split('').map(c => c + c).join('');
+      const n = parseInt(h, 16);
+      const lr = _srgbToLin(((n >> 16) & 255) / 255);
+      const lg = _srgbToLin(((n >> 8) & 255) / 255);
+      const lb = _srgbToLin((n & 255) / 255);
+      const l_ = Math.cbrt(0.4122214708 * lr + 0.5363325363 * lg + 0.0514459929 * lb);
+      const m_ = Math.cbrt(0.2119034982 * lr + 0.6806995451 * lg + 0.1073969566 * lb);
+      const s_ = Math.cbrt(0.0883024619 * lr + 0.2817188376 * lg + 0.6299787005 * lb);
+      const a = 1.9779984951 * l_ - 2.4285922050 * m_ + 0.4505937099 * s_;
+      const b = 0.0259040371 * l_ + 0.7827717662 * m_ - 0.8086757660 * s_;
+      let deg = Math.atan2(b, a) * (180 / Math.PI);
+      return deg < 0 ? deg + 360 : deg;
+    }
+    function _oklchHex(L, C, hDeg) {
+      const hr = (hDeg * Math.PI) / 180;
+      const a = C * Math.cos(hr), b = C * Math.sin(hr);
+      const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
+      const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
+      const s_ = L - 0.0894841775 * a - 1.2914855480 * b;
+      const l = l_ * l_ * l_, m = m_ * m_ * m_, s = s_ * s_ * s_;
+      const clamp = v => Math.max(0, Math.min(255, Math.round(v * 255)));
+      const r = clamp(_linToSrgb(+4.0767434750 * l - 3.3077115913 * m + 0.2309699292 * s));
+      const g = clamp(_linToSrgb(-1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s));
+      const bl = clamp(_linToSrgb(-0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s));
+      return '#' + [r, g, bl].map(x => x.toString(16).padStart(2, '0')).join('');
+    }
+    function buildAutoNeutralShades(brandHex) {
+      const h = _hexToHue(brandHex);
+      const C = 0.016; // Builcolor Auto Brand chroma
+      const defs = [
+        ['1000', 0.208, 0.8, 0.984, 0.2],
+        ['700',  0.446, 1.0, 0.711, 0.9],
+        ['500',  0.554, 1.1, 0.554, 1.1],
+        ['200',  0.929, 0.4, 0.372, 1.0],
+        ['100',  0.960, 0.3, 0.279, 0.9],
+        ['50',   0.984, 0.2, 0.208, 0.8],
+        ['25',   1.000, 0.0, 0.160, 0.6]
+      ];
+      const shades = {};
+      defs.forEach(([scale, lL, lCf, dL, dCf]) => {
+        shades[scale] = { light: _oklchHex(lL, C * lCf, h), dark: _oklchHex(dL, C * dCf, h) };
+      });
+      return { shades, h };
+    }
+
+    // 7 Curated Color Palettes from Builcolor.html
+    const BUILCOLOR_PALETTES = [
+      { id: 'destudio-blue',   name: 'De Studio Blue',   primary: '#3758F9', hover: '#2544D8', soft: '#EFF3FF', border: '#C7D6FE', gradEnd: '#2563EB', shadow: 'rgba(55, 88, 249, 0.28)' },
+      { id: 'stripe-blurple',  name: 'Stripe Blurple',   primary: '#635BFF', hover: '#4F46E5', soft: '#F0EFFF', border: '#D1CFFF', gradEnd: '#4F46E5', shadow: 'rgba(99, 91, 255, 0.28)' },
+      { id: 'electric-violet', name: 'Electric Violet',  primary: '#7C3AED', hover: '#6D28D9', soft: '#F5F3FF', border: '#DDD6FE', gradEnd: '#9333EA', shadow: 'rgba(124, 58, 237, 0.28)' },
+      { id: 'figma-purple',    name: 'Figma Purple',     primary: '#A259FF', hover: '#8B3DFF', soft: '#F7F0FF', border: '#E4CCFF', gradEnd: '#7C3AED', shadow: 'rgba(162, 89, 255, 0.28)' },
+      { id: 'cyan-tech',       name: 'Cyan Tech',        primary: '#0891B2', hover: '#0E7490', soft: '#ECFEFF', border: '#A5F3FC', gradEnd: '#0284C7', shadow: 'rgba(8, 145, 178, 0.28)' },
+      { id: 'emerald-trust',   name: 'Emerald Trust',    primary: '#059669', hover: '#047857', soft: '#ECFDF5', border: '#A7F3D0', gradEnd: '#10B981', shadow: 'rgba(5, 150, 105, 0.28)' },
+      { id: 'teal-fresh',      name: 'Teal Fresh',       primary: '#0D9488', hover: '#0F766E', soft: '#F0FDFA', border: '#99F6E4', gradEnd: '#14B8A6', shadow: 'rgba(13, 148, 136, 0.28)' }
+    ];
+
+    function renderPaletteBar() {
+      const bar = document.getElementById('xcoinPaletteBar');
+      if (!bar) return;
+      const activeId = localStorage.getItem('xcoin_palette_id') || 'destudio-blue';
+      bar.innerHTML = BUILCOLOR_PALETTES.map(p => `
+        <button type="button" class="palette-chip ${p.id === activeId ? 'is-active' : ''}" onclick="applyPresetPalette('${p.id}')" title="${p.name}">
+          <span class="palette-dot" style="background:linear-gradient(135deg, ${p.primary}, ${p.gradEnd});"></span>
+        </button>
+      `).join('');
+    }
+
+    function applyPresetPalette(id, silent = false) {
+      const p = BUILCOLOR_PALETTES.find(x => x.id === id) || BUILCOLOR_PALETTES[0];
+      const root = document.documentElement;
+      const isDark = xcoinState.theme === 'dark';
+      root.style.setProperty('--brand-primary', p.primary);
+      root.style.setProperty('--brand-primary-hover', p.hover);
+      root.style.setProperty('--brand-soft', isDark ? 'rgba(255, 255, 255, 0.08)' : p.soft);
+      root.style.setProperty('--bg-brand-subtle', isDark ? 'rgba(255, 255, 255, 0.08)' : p.soft);
+      root.style.setProperty('--brand-border', isDark ? 'rgba(255, 255, 255, 0.16)' : p.border);
+      root.style.setProperty('--ds-brand-ring', p.shadow.replace('0.28', '0.18'));
+      root.style.setProperty('--btn-primary-bg', `linear-gradient(135deg, ${p.primary} 0%, ${p.gradEnd} 100%)`);
+      root.style.setProperty('--btn-primary-shadow', `0 10px 24px -6px ${p.shadow}`);
+
+      // Auto-generated background & neutral palette synced to Brand Hue
+      const { shades, h } = buildAutoNeutralShades(p.primary);
+      applyNeutralShades(shades, isDark, root);
+      root.style.setProperty('--border-default', isDark ? shades['200'].dark : shades['200'].light);
+      root.style.setProperty('--bg-canvas', isDark ? _oklchHex(0.135, 0.012, h) : _oklchHex(0.962, 0.014, h));
+
+      localStorage.setItem('xcoin_palette_id', p.id);
+      renderPaletteBar();
+      if (!silent) showToast(`✓ Đã áp dụng bộ màu: ${p.name}`);
+    }
+
+    // Boot
+    (function initXcoin() {
+      document.documentElement.setAttribute('data-theme', xcoinState.theme);
+      const btn = document.getElementById('btnThemeToggle');
+      if (btn) btn.innerHTML = dsIcon(xcoinState.theme === 'dark' ? 'sun-light' : 'moon-dark', 16);
+      hydrateStaticIcons();
+      syncTypographyFromDeStudio();
+      setFontPairing(localStorage.getItem('xcoin_font_pairing') || 'web3');
+      syncColorsFromBuilcolor();
+      renderPaletteBar();
+      applyPresetPalette(localStorage.getItem('xcoin_palette_id') || 'destudio-blue', true);
+      renderTransactions();
+      renderBudgetCategories();
+    })();
+  </script>
+</body>
+</html>
